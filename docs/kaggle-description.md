@@ -1,6 +1,6 @@
 **Reviews de produtos (pt-BR) com prós e contras**: 2,87 milhões de avaliações de 9 lojas brasileiras, com sentimento, 12,9 milhões de cláusulas e os prós e contras de 222 mil produtos. **Brazilian product reviews** with sentiment, clauses and pros and cons per product.
 
-![Pros and cons from reviews](https://raw.githubusercontent.com/CaiqueDourado/reviews-produtos-ptbr/main/docs/img/cover.png)
+![Pros and cons from reviews](https://raw.githubusercontent.com/CaiqueDourado/reviews-produtos-ptbr/main/docs/img/cover.png?v=2)
 
 Reviews collected from 2017 to 2022 from the product pages of Americanas, Magazine Luiza, Submarino, Shoptime, Casas Bahia, Extra, Leroy Merlin, Ponto Frio and Fast Shop (written 2008–2019), for the author's review site *É bom? Vale a pena?* and data lake. About 22 times the size of B2W-Reviews01, the best-known Portuguese review dataset.
 

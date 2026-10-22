@@ -1,4 +1,4 @@
-"""Figures for README and Kaggle (EN and PT): cover, sentiment by stars. Reads stats.json.
+"""Figure for README and Kaggle (EN and PT): sentiment by stars. Reads stats.json. Cover: make_cover.py.
 
     python scripts/make_figures.py
 """
@@ -134,8 +134,7 @@ def main() -> None:
     stats = json.loads((ROOT / "stats.json").read_text(encoding="utf-8"))
     OUT.mkdir(parents=True, exist_ok=True)
     for lang, t in TEXT.items():
-        chart(stats, lang, t)
-        cover(stats, lang, t)
+        chart(stats, lang, t)  # the cover is drawn by make_cover.py
     print("figures written to", OUT)
 
 

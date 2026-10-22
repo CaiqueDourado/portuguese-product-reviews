@@ -6,3 +6,4 @@ __pycache__/
 kaggle.json
 sample_in/
 work/
+kaggle/*.parquet
