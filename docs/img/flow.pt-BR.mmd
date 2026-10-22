@@ -1,0 +1,8 @@
+flowchart LR
+    A["9 lojas<br/>páginas de reviews"] --> B["Reviews<br/>estrelas e texto"]
+    B --> C["1 · Sentimento<br/>AWS Comprehend"]
+    B --> D["2 · Etiquetas<br/>Stanford tagger"]
+    D --> E["3 · Cláusulas<br/>corte em pontuação<br/>e conjunções"]
+    E --> F["4 · Agrupar e contar<br/>chaves de casamento,<br/>forma canônica"]
+    C --> G["5 · Top 4<br/>prós e contras<br/>por produto"]
+    F --> G

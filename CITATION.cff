@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "Reviews de produtos (pt-BR) com prós e contras: Brazilian product reviews with sentiment, clauses and pros and cons"
+authors:
+  - family-names: Dourado
+    given-names: Caique
+version: 1.0.0
+date-released: 2026-10-22
+license: CC-BY-4.0
+repository-code: "https://github.com/CaiqueDourado/reviews-produtos-ptbr"
+url: "https://www.kaggle.com/datasets/caiquedourado/reviews-produtos-ptbr"
+keywords:
+  - reviews
+  - sentiment-analysis
+  - opinion-summarization
+  - brazil
+  - portuguese
+  - e-commerce

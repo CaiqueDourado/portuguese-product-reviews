@@ -1,0 +1,43 @@
+{
+  "slug": "reviews-produtos-ptbr",
+  "kaggle_user": "caiquedourado",
+  "title": "Brazilian product reviews with sentiment, clauses and pros and cons",
+  "title_pt": "Reviews de produtos do e-commerce brasileiro com sentimento, cláusulas e prós e contras",
+  "kaggle_title": "Reviews de Produtos (pt-BR) com Prós e Contras",
+  "kaggle_subtitle": "2.87M Brazilian product reviews with sentiment, 12.9M clauses and pros/cons",
+  "kaggle_license": "Attribution 4.0 International (CC BY 4.0)",
+  "keywords": [
+    "brazil",
+    "nlp",
+    "text",
+    "retail and shopping",
+    "e-commerce services"
+  ],
+  "tables": [
+    {
+      "name": "reviews",
+      "description": "2,871,096 reviews from 9 Brazilian stores (2008-2019): stars, text, AWS sentiment, helpfulness.",
+      "description_pt": "2.871.096 reviews de 9 lojas brasileiras (2008-2019): estrelas, texto, sentimento AWS, utilidade."
+    },
+    {
+      "name": "sentences",
+      "description": "12,896,607 clauses cut from the reviews by the 2020 method (Stanford POS tags), with matching keys and the canonical form.",
+      "description_pt": "12.896.607 cláusulas cortadas dos reviews pelo método de 2020 (etiquetas Stanford), com chaves e forma canônica."
+    },
+    {
+      "name": "aspect_ratings",
+      "description": "2,484,634 scores per aspect (quality, design, battery...) given in the reviews.",
+      "description_pt": "2.484.634 notas por aspecto (qualidade, design, bateria...) dadas nos reviews."
+    },
+    {
+      "name": "pros_cons",
+      "description": "Top 4 pros and 4 cons of 222,976 products, computed with the 2020 rule.",
+      "description_pt": "Os 4 prós e 4 contras de 222.976 produtos, calculados com a regra de 2020."
+    },
+    {
+      "name": "groups",
+      "description": "Name, review count and average stars of each product group.",
+      "description_pt": "Nome, quantidade de reviews e média de estrelas de cada grupo de produto."
+    }
+  ]
+}

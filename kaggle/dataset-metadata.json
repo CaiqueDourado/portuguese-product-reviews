@@ -1,0 +1,316 @@
+{
+  "title": "Reviews de Produtos (pt-BR) com Pr\u00f3s e Contras",
+  "subtitle": "2.87M Brazilian product reviews with sentiment, 12.9M clauses and pros/cons",
+  "description": "**Reviews de produtos (pt-BR) com pr\u00f3s e contras**: 2,87 milh\u00f5es de avalia\u00e7\u00f5es de 9 lojas brasileiras, com sentimento, 12,9 milh\u00f5es de cl\u00e1usulas e os pr\u00f3s e contras de 222 mil produtos. **Brazilian product reviews** with sentiment, clauses and pros and cons per product.\n\n![Pros and cons from reviews](https://raw.githubusercontent.com/CaiqueDourado/reviews-produtos-ptbr/main/docs/img/cover.png)\n\nReviews collected from 2017 to 2022 from the product pages of Americanas, Magazine Luiza, Submarino, Shoptime, Casas Bahia, Extra, Leroy Merlin, Ponto Frio and Fast Shop (written 2008\u20132019), for the author's review site *\u00c9 bom? Vale a pena?* and data lake. About 22 times the size of B2W-Reviews01, the best-known Portuguese review dataset.\n\nOn top of the reviews, the 2020 pipeline that turned them into pros and cons:\n\n![The five steps](https://raw.githubusercontent.com/CaiqueDourado/reviews-produtos-ptbr/main/docs/img/flow.png)\n\n1. **Sentiment** of each review from AWS Comprehend.\n2. **Part-of-speech tags** from the Stanford tagger (Portuguese model).\n3. **Clauses** cut at punctuation and conjunctions.\n4. **Grouped and counted** per product through six matching keys and a canonical form.\n5. **Top 4 pros and 4 cons** per product.\n\n## Files\n\n- `reviews.parquet`: 2,871,096 reviews: stars, recommendation, title, text, AWS sentiment, helpfulness, dates, store.\n- `sentences.parquet`: 12,896,607 clauses with POS tags, matching keys and canonical form.\n- `aspect_ratings.parquet`: 2,484,634 scores per aspect (quality, design, battery, screen\u2026).\n- `pros_cons.parquet`: top 4 pros and 4 cons of 222,976 products.\n- `groups.parquet`: product name, review count and average stars per product group.\n\n`product_id` and `group_id` join with the [catalog of Brazilian e-commerce products](https://www.kaggle.com/datasets/caiquedourado/catalogo-produtos-ecommerce-brasil) (prices, specifications, EANs).\n\n## Cleaning and privacy\n\nNicknames, cities and author ids were never exported. E-mails, phone numbers and CPF-like numbers inside the texts are masked. About 28% of the texts had lost every \u00e3/\u00f5 in collection (\"nao\", \"fun\u00e7ao\"); those words were restored from intact texts and the original kept in `text_original`. Sentiment is per review, not per clause, so a cons list can contain a positive clause from a negative review: the data quality report explains this and the other limits.\n\nMethodology, data quality report, data dictionary (EN and PT), build scripts and a sample: **https://github.com/CaiqueDourado/reviews-produtos-ptbr**\n\n## Related\n\n- [Cat\u00e1logo de produtos do e-commerce brasileiro](https://www.kaggle.com/datasets/caiquedourado/catalogo-produtos-ecommerce-brasil)\n- [Pares de produtos para matching](https://www.kaggle.com/datasets/caiquedourado/pares-matching-produtos-ptbr)\n- [Nomes e sobrenomes do Brasil](https://www.kaggle.com/datasets/caiquedourado/nomes-e-sobrenomes-brasil) (same matching keys)\n\nLicense: CC BY 4.0 for the compilation and derived columns; review texts belong to their authors. Version 1.0.0. Author: Caique Dourado.\n",
+  "id": "caiquedourado/reviews-produtos-ptbr",
+  "licenses": [
+    {
+      "name": "Attribution 4.0 International (CC BY 4.0)"
+    }
+  ],
+  "keywords": [
+    "brazil",
+    "nlp",
+    "text",
+    "retail and shopping",
+    "e-commerce services"
+  ],
+  "isPrivate": false,
+  "resources": [
+    {
+      "path": "reviews.parquet",
+      "description": "2,871,096 reviews from 9 Brazilian stores (2008-2019): stars, text, AWS sentiment, helpfulness.",
+      "schema": {
+        "fields": [
+          {
+            "name": "review_id",
+            "description": "Review id in the author's database. Primary key.",
+            "type": "integer"
+          },
+          {
+            "name": "product_id",
+            "description": "Offer the review was collected from: `produtos.id` in the catalog dataset.",
+            "type": "integer"
+          },
+          {
+            "name": "group_id",
+            "description": "Product group (same product across stores): `grupos.id` in the catalog dataset and key of groups and pros_cons.",
+            "type": "integer"
+          },
+          {
+            "name": "store",
+            "description": "Store whose product page showed the review.",
+            "type": "string"
+          },
+          {
+            "name": "rating",
+            "description": "Stars given by the customer, 1 to 5.",
+            "type": "integer"
+          },
+          {
+            "name": "recommended",
+            "description": "Whether the customer answered yes to \"would you recommend this product?\". Empty when not asked.",
+            "type": "boolean"
+          },
+          {
+            "name": "ratings_only",
+            "description": "Review with stars and no text, as flagged by the review platform.",
+            "type": "boolean"
+          },
+          {
+            "name": "title",
+            "description": "Review title written by the customer.",
+            "type": "string"
+          },
+          {
+            "name": "text",
+            "description": "Review text. Store names were replaced by \"loja\" in 2020; e-mails, phone numbers and CPFs are masked; lost \u00e3/\u00f5 restored (see text_original).",
+            "type": "string"
+          },
+          {
+            "name": "text_original",
+            "description": "Text as collected, only when the \u00e3/\u00f5 restoration changed it.",
+            "type": "string"
+          },
+          {
+            "name": "tilde_restored",
+            "description": "True when \u00e3/\u00f5 were restored in `text`.",
+            "type": "boolean"
+          },
+          {
+            "name": "sentiment",
+            "description": "Sentiment of the whole review from AWS Comprehend (POSITIVE, NEGATIVE, NEUTRAL, MIXED); POSITIVE with 1-2 stars was changed to NEGATIVE in 2020.",
+            "type": "string"
+          },
+          {
+            "name": "sentiment_aws_original",
+            "description": "AWS label before that change (only on the changed rows).",
+            "type": "string"
+          },
+          {
+            "name": "helpfulness",
+            "description": "Share of readers who found the review useful, 0 to 1, as published by the platform.",
+            "type": "number"
+          },
+          {
+            "name": "feedback_positive",
+            "description": "Readers who marked the review as useful.",
+            "type": "integer"
+          },
+          {
+            "name": "feedback_negative",
+            "description": "Readers who marked the review as not useful.",
+            "type": "integer"
+          },
+          {
+            "name": "comments",
+            "description": "Comments on the review.",
+            "type": "integer"
+          },
+          {
+            "name": "submitted_at",
+            "description": "When the customer submitted the review.",
+            "type": "datetime"
+          },
+          {
+            "name": "modified_at",
+            "description": "Last change on the platform.",
+            "type": "datetime"
+          },
+          {
+            "name": "locale",
+            "description": "Language and country of the review (pt_BR in 99.9% of the reviews that have it).",
+            "type": "string"
+          },
+          {
+            "name": "syndicated",
+            "description": "Review shared from another site of the same review network, as flagged by the platform.",
+            "type": "boolean"
+          },
+          {
+            "name": "campaign",
+            "description": "Where the review was collected (e-mail after purchase, product page, app...), as published by the platform.",
+            "type": "string"
+          },
+          {
+            "name": "collected_at",
+            "description": "When the author's crawler saved the review.",
+            "type": "datetime"
+          }
+        ]
+      }
+    },
+    {
+      "path": "sentences.parquet",
+      "description": "12,896,607 clauses cut from the reviews by the 2020 method (Stanford POS tags), with matching keys and the canonical form.",
+      "schema": {
+        "fields": [
+          {
+            "name": "sentence_id",
+            "description": "Clause id. Primary key.",
+            "type": "integer"
+          },
+          {
+            "name": "review_id",
+            "description": "Review the clause came from.",
+            "type": "integer"
+          },
+          {
+            "name": "group_id",
+            "description": "Product group of the review.",
+            "type": "integer"
+          },
+          {
+            "name": "text",
+            "description": "The clause, cut at punctuation and conjunctions by the 2020 method; first letter upper case, the rest lower case.",
+            "type": "string"
+          },
+          {
+            "name": "tagged",
+            "description": "The clause with Stanford POS tags (`palavra/TAG`), original case.",
+            "type": "string"
+          },
+          {
+            "name": "canonical",
+            "description": "Canonical form inside the product group: the most frequent spelling among clauses that share a key. The column shown as pro/con.",
+            "type": "string"
+          },
+          {
+            "name": "count_site",
+            "description": "How many times the same clause appears in the whole database (all products and stores).",
+            "type": "integer"
+          },
+          {
+            "name": "key_metaphone",
+            "description": "Portuguese Metaphone of the clause (empty for one-word clauses).",
+            "type": "string"
+          },
+          {
+            "name": "key_fingerprint",
+            "description": "OpenRefine fingerprint, with the 2023 keyer bug (keeps every other word); empty under 3 words.",
+            "type": "string"
+          },
+          {
+            "name": "key_tokens",
+            "description": "Stopwords removed and Brazilian stemmer applied; empty under 3 words.",
+            "type": "string"
+          },
+          {
+            "name": "key_tokens_fingerprint",
+            "description": "The stems of key_tokens, sorted.",
+            "type": "string"
+          },
+          {
+            "name": "key_ngram",
+            "description": "Character 2-gram fingerprint.",
+            "type": "string"
+          },
+          {
+            "name": "key_soft",
+            "description": "Lower case, no accents, letters, digits and spaces only.",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "path": "aspect_ratings.parquet",
+      "description": "2,484,634 scores per aspect (quality, design, battery...) given in the reviews.",
+      "schema": {
+        "fields": [
+          {
+            "name": "review_id",
+            "description": "Review the score belongs to.",
+            "type": "integer"
+          },
+          {
+            "name": "aspect_key",
+            "description": "Aspect key as the store's form named it (QualidadeGeral, Design2, BatteryLife...).",
+            "type": "string"
+          },
+          {
+            "name": "aspect",
+            "description": "Aspect in Portuguese, with the keys of different stores merged (Qualidade, Design, Bateria...).",
+            "type": "string"
+          },
+          {
+            "name": "score",
+            "description": "Score given to that aspect, 1 to 5.",
+            "type": "integer"
+          }
+        ]
+      }
+    },
+    {
+      "path": "pros_cons.parquet",
+      "description": "Top 4 pros and 4 cons of 222,976 products, computed with the 2020 rule.",
+      "schema": {
+        "fields": [
+          {
+            "name": "group_id",
+            "description": "Product group.",
+            "type": "integer"
+          },
+          {
+            "name": "kind",
+            "description": "`pro` (from POSITIVE reviews) or `con` (from NEGATIVE reviews).",
+            "type": "string"
+          },
+          {
+            "name": "rank",
+            "description": "1 to 4, as shown on the product page.",
+            "type": "integer"
+          },
+          {
+            "name": "clause",
+            "description": "Canonical clause with at least two words.",
+            "type": "string"
+          },
+          {
+            "name": "mentions",
+            "description": "Clauses of this group and sentiment with this canonical form (first sort key).",
+            "type": "integer"
+          },
+          {
+            "name": "count_site",
+            "description": "Frequency of the clause in the whole database (tie-break).",
+            "type": "integer"
+          },
+          {
+            "name": "example_review_id",
+            "description": "One review containing the clause.",
+            "type": "integer"
+          }
+        ]
+      }
+    },
+    {
+      "path": "groups.parquet",
+      "description": "Name, review count and average stars of each product group.",
+      "schema": {
+        "fields": [
+          {
+            "name": "group_id",
+            "description": "Product group. Primary key.",
+            "type": "integer"
+          },
+          {
+            "name": "group_name",
+            "description": "Product name of the group in the catalog.",
+            "type": "string"
+          },
+          {
+            "name": "reviews",
+            "description": "Reviews of the group in this dataset.",
+            "type": "integer"
+          },
+          {
+            "name": "avg_rating",
+            "description": "Average stars of those reviews.",
+            "type": "number"
+          }
+        ]
+      }
+    }
+  ]
+}

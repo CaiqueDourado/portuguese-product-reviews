@@ -1,0 +1,359 @@
+[
+  {
+    "table": "reviews",
+    "name": "review_id",
+    "type": "integer",
+    "description_en": "Review id in the author's database. Primary key.",
+    "description_pt": "Id do review no banco do autor. Chave primária."
+  },
+  {
+    "table": "reviews",
+    "name": "product_id",
+    "type": "integer",
+    "description_en": "Offer the review was collected from: `produtos.id` in the catalog dataset.",
+    "description_pt": "Oferta de onde o review foi coletado: `produtos.id` na base do catálogo."
+  },
+  {
+    "table": "reviews",
+    "name": "group_id",
+    "type": "integer",
+    "description_en": "Product group (same product across stores): `grupos.id` in the catalog dataset and key of groups and pros_cons.",
+    "description_pt": "Grupo de produto (o mesmo produto em várias lojas): `grupos.id` no catálogo e chave de groups e pros_cons."
+  },
+  {
+    "table": "reviews",
+    "name": "store",
+    "type": "string",
+    "description_en": "Store whose product page showed the review.",
+    "description_pt": "Loja em cuja página do produto o review aparecia."
+  },
+  {
+    "table": "reviews",
+    "name": "rating",
+    "type": "integer",
+    "description_en": "Stars given by the customer, 1 to 5.",
+    "description_pt": "Estrelas dadas pelo cliente, de 1 a 5."
+  },
+  {
+    "table": "reviews",
+    "name": "recommended",
+    "type": "boolean",
+    "description_en": "Whether the customer answered yes to \"would you recommend this product?\". Empty when not asked.",
+    "description_pt": "Se o cliente respondeu sim a \"você recomendaria este produto?\". Vazio quando não foi perguntado."
+  },
+  {
+    "table": "reviews",
+    "name": "ratings_only",
+    "type": "boolean",
+    "description_en": "Review with stars and no text, as flagged by the review platform.",
+    "description_pt": "Review só com estrelas, sem texto, segundo a plataforma de reviews."
+  },
+  {
+    "table": "reviews",
+    "name": "title",
+    "type": "string",
+    "description_en": "Review title written by the customer.",
+    "description_pt": "Título do review escrito pelo cliente."
+  },
+  {
+    "table": "reviews",
+    "name": "text",
+    "type": "string",
+    "description_en": "Review text. Store names were replaced by \"loja\" in 2020; e-mails, phone numbers and CPFs are masked; lost ã/õ restored (see text_original).",
+    "description_pt": "Texto do review. Nomes de lojas trocados por \"loja\" em 2020; e-mails, telefones e CPFs mascarados; ã/õ perdidos restaurados (ver text_original)."
+  },
+  {
+    "table": "reviews",
+    "name": "text_original",
+    "type": "string",
+    "description_en": "Text as collected, only when the ã/õ restoration changed it.",
+    "description_pt": "Texto como coletado, só quando a restauração de ã/õ o alterou."
+  },
+  {
+    "table": "reviews",
+    "name": "tilde_restored",
+    "type": "boolean",
+    "description_en": "True when ã/õ were restored in `text`.",
+    "description_pt": "Verdadeiro quando ã/õ foram restaurados em `text`."
+  },
+  {
+    "table": "reviews",
+    "name": "sentiment",
+    "type": "string",
+    "description_en": "Sentiment of the whole review from AWS Comprehend (POSITIVE, NEGATIVE, NEUTRAL, MIXED); POSITIVE with 1-2 stars was changed to NEGATIVE in 2020.",
+    "description_pt": "Sentimento do review inteiro pelo AWS Comprehend (POSITIVE, NEGATIVE, NEUTRAL, MIXED); POSITIVE com 1-2 estrelas virou NEGATIVE em 2020."
+  },
+  {
+    "table": "reviews",
+    "name": "sentiment_aws_original",
+    "type": "string",
+    "description_en": "AWS label before that change (only on the changed rows).",
+    "description_pt": "Rótulo da AWS antes dessa troca (só nas linhas trocadas)."
+  },
+  {
+    "table": "reviews",
+    "name": "helpfulness",
+    "type": "float",
+    "description_en": "Share of readers who found the review useful, 0 to 1, as published by the platform.",
+    "description_pt": "Proporção de leitores que acharam o review útil, de 0 a 1, como publicado pela plataforma."
+  },
+  {
+    "table": "reviews",
+    "name": "feedback_positive",
+    "type": "integer",
+    "description_en": "Readers who marked the review as useful.",
+    "description_pt": "Leitores que marcaram o review como útil."
+  },
+  {
+    "table": "reviews",
+    "name": "feedback_negative",
+    "type": "integer",
+    "description_en": "Readers who marked the review as not useful.",
+    "description_pt": "Leitores que marcaram o review como não útil."
+  },
+  {
+    "table": "reviews",
+    "name": "comments",
+    "type": "integer",
+    "description_en": "Comments on the review.",
+    "description_pt": "Comentários no review."
+  },
+  {
+    "table": "reviews",
+    "name": "submitted_at",
+    "type": "timestamp",
+    "description_en": "When the customer submitted the review.",
+    "description_pt": "Quando o cliente enviou o review."
+  },
+  {
+    "table": "reviews",
+    "name": "modified_at",
+    "type": "timestamp",
+    "description_en": "Last change on the platform.",
+    "description_pt": "Última alteração na plataforma."
+  },
+  {
+    "table": "reviews",
+    "name": "locale",
+    "type": "string",
+    "description_en": "Language and country of the review (pt_BR in 99.9% of the reviews that have it).",
+    "description_pt": "Idioma e país do review (pt_BR em 99,9% dos que têm)."
+  },
+  {
+    "table": "reviews",
+    "name": "syndicated",
+    "type": "boolean",
+    "description_en": "Review shared from another site of the same review network, as flagged by the platform.",
+    "description_pt": "Review compartilhado de outro site da mesma rede de reviews, segundo a plataforma."
+  },
+  {
+    "table": "reviews",
+    "name": "campaign",
+    "type": "string",
+    "description_en": "Where the review was collected (e-mail after purchase, product page, app...), as published by the platform.",
+    "description_pt": "Onde o review foi coletado (e-mail pós-compra, página do produto, app...), segundo a plataforma."
+  },
+  {
+    "table": "reviews",
+    "name": "collected_at",
+    "type": "timestamp",
+    "description_en": "When the author's crawler saved the review.",
+    "description_pt": "Quando o crawler do autor gravou o review."
+  },
+  {
+    "table": "sentences",
+    "name": "sentence_id",
+    "type": "integer",
+    "description_en": "Clause id. Primary key.",
+    "description_pt": "Id da cláusula. Chave primária."
+  },
+  {
+    "table": "sentences",
+    "name": "review_id",
+    "type": "integer",
+    "description_en": "Review the clause came from.",
+    "description_pt": "Review de onde a cláusula saiu."
+  },
+  {
+    "table": "sentences",
+    "name": "group_id",
+    "type": "integer",
+    "description_en": "Product group of the review.",
+    "description_pt": "Grupo de produto do review."
+  },
+  {
+    "table": "sentences",
+    "name": "text",
+    "type": "string",
+    "description_en": "The clause, cut at punctuation and conjunctions by the 2020 method; first letter upper case, the rest lower case.",
+    "description_pt": "A cláusula, cortada em pontuação e conjunções pelo método de 2020; primeira letra maiúscula, resto minúsculo."
+  },
+  {
+    "table": "sentences",
+    "name": "tagged",
+    "type": "string",
+    "description_en": "The clause with Stanford POS tags (`palavra/TAG`), original case.",
+    "description_pt": "A cláusula com as etiquetas do Stanford POS Tagger (`palavra/TAG`), caixa original."
+  },
+  {
+    "table": "sentences",
+    "name": "canonical",
+    "type": "string",
+    "description_en": "Canonical form inside the product group: the most frequent spelling among clauses that share a key. The column shown as pro/con.",
+    "description_pt": "Forma canônica dentro do grupo: a grafia mais frequente entre as cláusulas que compartilham uma chave. É a coluna exibida como pró/contra."
+  },
+  {
+    "table": "sentences",
+    "name": "count_site",
+    "type": "integer",
+    "description_en": "How many times the same clause appears in the whole database (all products and stores).",
+    "description_pt": "Quantas vezes a mesma cláusula aparece no banco inteiro (todos os produtos e lojas)."
+  },
+  {
+    "table": "sentences",
+    "name": "key_metaphone",
+    "type": "string",
+    "description_en": "Portuguese Metaphone of the clause (empty for one-word clauses).",
+    "description_pt": "Metaphone português da cláusula (vazio para cláusula de uma palavra)."
+  },
+  {
+    "table": "sentences",
+    "name": "key_fingerprint",
+    "type": "string",
+    "description_en": "OpenRefine fingerprint, with the 2023 keyer bug (keeps every other word); empty under 3 words.",
+    "description_pt": "Fingerprint do OpenRefine, com o bug do keyer (guarda uma palavra sim, outra não); vazio com menos de 3 palavras."
+  },
+  {
+    "table": "sentences",
+    "name": "key_tokens",
+    "type": "string",
+    "description_en": "Stopwords removed and Brazilian stemmer applied; empty under 3 words.",
+    "description_pt": "Sem stopwords e com o stemmer brasileiro; vazio com menos de 3 palavras."
+  },
+  {
+    "table": "sentences",
+    "name": "key_tokens_fingerprint",
+    "type": "string",
+    "description_en": "The stems of key_tokens, sorted.",
+    "description_pt": "Os radicais de key_tokens, ordenados."
+  },
+  {
+    "table": "sentences",
+    "name": "key_ngram",
+    "type": "string",
+    "description_en": "Character 2-gram fingerprint.",
+    "description_pt": "Fingerprint de 2-gramas de caracteres."
+  },
+  {
+    "table": "sentences",
+    "name": "key_soft",
+    "type": "string",
+    "description_en": "Lower case, no accents, letters, digits and spaces only.",
+    "description_pt": "Minúsculas, sem acento, só letras, dígitos e espaços."
+  },
+  {
+    "table": "aspect_ratings",
+    "name": "review_id",
+    "type": "integer",
+    "description_en": "Review the score belongs to.",
+    "description_pt": "Review a que a nota pertence."
+  },
+  {
+    "table": "aspect_ratings",
+    "name": "aspect_key",
+    "type": "string",
+    "description_en": "Aspect key as the store's form named it (QualidadeGeral, Design2, BatteryLife...).",
+    "description_pt": "Chave do aspecto como o formulário da loja a chamava (QualidadeGeral, Design2, BatteryLife...)."
+  },
+  {
+    "table": "aspect_ratings",
+    "name": "aspect",
+    "type": "string",
+    "description_en": "Aspect in Portuguese, with the keys of different stores merged (Qualidade, Design, Bateria...).",
+    "description_pt": "Aspecto em português, com as chaves das lojas unificadas (Qualidade, Design, Bateria...)."
+  },
+  {
+    "table": "aspect_ratings",
+    "name": "score",
+    "type": "integer",
+    "description_en": "Score given to that aspect, 1 to 5.",
+    "description_pt": "Nota dada ao aspecto, de 1 a 5."
+  },
+  {
+    "table": "pros_cons",
+    "name": "group_id",
+    "type": "integer",
+    "description_en": "Product group.",
+    "description_pt": "Grupo de produto."
+  },
+  {
+    "table": "pros_cons",
+    "name": "kind",
+    "type": "string",
+    "description_en": "`pro` (from POSITIVE reviews) or `con` (from NEGATIVE reviews).",
+    "description_pt": "`pro` (de reviews POSITIVE) ou `con` (de reviews NEGATIVE)."
+  },
+  {
+    "table": "pros_cons",
+    "name": "rank",
+    "type": "integer",
+    "description_en": "1 to 4, as shown on the product page.",
+    "description_pt": "De 1 a 4, como exibido na página do produto."
+  },
+  {
+    "table": "pros_cons",
+    "name": "clause",
+    "type": "string",
+    "description_en": "Canonical clause with at least two words.",
+    "description_pt": "Cláusula canônica com pelo menos duas palavras."
+  },
+  {
+    "table": "pros_cons",
+    "name": "mentions",
+    "type": "integer",
+    "description_en": "Clauses of this group and sentiment with this canonical form (first sort key).",
+    "description_pt": "Cláusulas do grupo e sentimento com essa forma canônica (1ª chave de ordenação)."
+  },
+  {
+    "table": "pros_cons",
+    "name": "count_site",
+    "type": "integer",
+    "description_en": "Frequency of the clause in the whole database (tie-break).",
+    "description_pt": "Frequência da cláusula no banco inteiro (desempate)."
+  },
+  {
+    "table": "pros_cons",
+    "name": "example_review_id",
+    "type": "integer",
+    "description_en": "One review containing the clause.",
+    "description_pt": "Um review que contém a cláusula."
+  },
+  {
+    "table": "groups",
+    "name": "group_id",
+    "type": "integer",
+    "description_en": "Product group. Primary key.",
+    "description_pt": "Grupo de produto. Chave primária."
+  },
+  {
+    "table": "groups",
+    "name": "group_name",
+    "type": "string",
+    "description_en": "Product name of the group in the catalog.",
+    "description_pt": "Nome do produto do grupo no catálogo."
+  },
+  {
+    "table": "groups",
+    "name": "reviews",
+    "type": "integer",
+    "description_en": "Reviews of the group in this dataset.",
+    "description_pt": "Reviews do grupo nesta base."
+  },
+  {
+    "table": "groups",
+    "name": "avg_rating",
+    "type": "float",
+    "description_en": "Average stars of those reviews.",
+    "description_pt": "Média de estrelas desses reviews."
+  }
+]
