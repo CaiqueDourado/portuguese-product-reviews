@@ -86,6 +86,10 @@ FROM 'aspect_ratings.parquet' GROUP BY aspect HAVING count(*) > 1000 ORDER BY av
 
 The collection started in 2017 for **É bom? Vale a pena?** ([opiniaobomvaleapena.com.br, archived](https://web.archive.org/web/20230106180533/https://opiniaobomvaleapena.com.br/)), a WordPress site with one page per product ("<produto> é bom? vale a pena?"), its reviews, and affiliate links to the stores. Most stores served their reviews through Bazaarvoice's JSON API; Casas Bahia, Extra and Ponto Frio through Via Varejo's own. The collection then moved to the author's crawler and data lake, where each review was linked to the store offer and to the product group, so one product's reviews from all stores could be read together, and where the pros and cons were computed for the product pages of the author's sites. Details: [methodology](docs/methodology.md). The site's story: [case study](docs/case-study-e-bom-vale-a-pena.md).
 
+[![Tudo Sobre Produtos](https://raw.githubusercontent.com/CaiqueDourado/CaiqueDourado/main/assets/tudosobreprodutos_primeira_versao.png)](https://web.archive.org/web/20251021032358/https://tudosobreprodutos.com.br/tudo-sobre-bebedouro-cadence-pure-vita-elegant-0v)
+
+*Tudo Sobre Produtos (2020), one of the author's sites whose product pages showed these reviews and their pros and cons. [Archived on the Wayback Machine](https://web.archive.org/web/20251021032358/https://tudosobreprodutos.com.br/tudo-sobre-bebedouro-cadence-pure-vita-elegant-0v).*
+
 ## Privacy and cleaning
 
 - Nicknames, cities, author ids and review ids were never exported.
@@ -113,6 +117,7 @@ stats.json     counts of every build step
 - [pros-e-contras-ptbr](https://github.com/CaiqueDourado/pros-e-contras-ptbr): the 2020 method as a Python library, plus clause-level sentiment. Articles: [clause splitting](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/article-clause-splitting.md) (Google Cloud NL × Stanford × rules) and [pros and cons](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/article-pros-and-cons.md).
 - [Case study: É bom? Vale a pena?](docs/case-study-e-bom-vale-a-pena.md): the review site this data was collected for.
 - [catalogo-produtos-ecommerce-brasil](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil): the products these reviews belong to.
+- [lojas-virtuais-brasil](https://github.com/CaiqueDourado/lojas-virtuais-brasil): 63,974 Brazilian online stores with platform and Reclame Aqui reputation ([Kaggle](https://www.kaggle.com/datasets/caiquedourado/lojas-virtuais-brasil)).
 - [DedupKit](https://github.com/CaiqueDourado/DedupKit): the matching keys, with the fingerprint bug fixed.
 - [nomes-e-sobrenomes-brasil](https://github.com/CaiqueDourado/nomes-e-sobrenomes-brasil): the same keys applied to names.
 

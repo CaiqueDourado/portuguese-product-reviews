@@ -14,6 +14,12 @@ On top of the reviews, the 2020 pipeline that turned them into pros and cons:
 4. **Grouped and counted** per product through six matching keys and a canonical form.
 5. **Top 4 pros and 4 cons** per product.
 
+## Where the reviews were shown
+
+The collection started in 2017 for **É bom? Vale a pena?** ([archived](https://web.archive.org/web/20230106180533/https://opiniaobomvaleapena.com.br/)), one page per product with its reviews. Later the reviews and their pros and cons appeared on the product pages of the author's sites, such as [Tudo Sobre Produtos](https://web.archive.org/web/20251021032358/https://tudosobreprodutos.com.br/tudo-sobre-bebedouro-cadence-pure-vita-elegant-0v):
+
+![Tudo Sobre Produtos (2020)](https://raw.githubusercontent.com/CaiqueDourado/CaiqueDourado/main/assets/tudosobreprodutos_primeira_versao.png)
+
 ## Files
 
 - `reviews.parquet`: 2,871,096 reviews: stars, recommendation, title, text, AWS sentiment, helpfulness, dates, store.

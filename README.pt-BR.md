@@ -88,6 +88,10 @@ A coleta começou em 2017 para o **É bom? Vale a pena?** ([opiniaobomvaleapena.
 
 Depois, a coleta passou para o crawler e o data lake do autor. Lá, cada review foi ligado à oferta da loja e ao grupo de produto, para que os reviews de um produto em todas as lojas fossem lidos juntos. Foi também no data lake que os prós e contras foram calculados, para as páginas de produto dos sites do autor. Detalhes na [metodologia](docs/methodology.md) (em inglês). A história do site está no [estudo de caso](docs/estudo-de-caso-e-bom-vale-a-pena.md).
 
+[![Tudo Sobre Produtos](https://raw.githubusercontent.com/CaiqueDourado/CaiqueDourado/main/assets/tudosobreprodutos_primeira_versao.png)](https://web.archive.org/web/20251021032358/https://tudosobreprodutos.com.br/tudo-sobre-bebedouro-cadence-pure-vita-elegant-0v)
+
+*Tudo Sobre Produtos (2020), um dos sites do autor cujas páginas de produto mostravam estes reviews e seus prós e contras. [Arquivado no Wayback Machine](https://web.archive.org/web/20251021032358/https://tudosobreprodutos.com.br/tudo-sobre-bebedouro-cadence-pure-vita-elegant-0v).*
+
 ## Privacidade e limpeza
 
 - Apelido, cidade, id do autor e ids do review nunca foram exportados.
@@ -115,6 +119,7 @@ stats.json     contagens de cada etapa do build
 - [pros-e-contras-ptbr](https://github.com/CaiqueDourado/pros-e-contras-ptbr): o método de 2020 como biblioteca Python, com sentimento por cláusula. Artigos: [divisão em cláusulas](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/artigo-divisao-de-clausulas.md) (Google Cloud NL × Stanford × regras) e [prós e contras](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/artigo-pros-e-contras.md).
 - [Estudo de caso: É bom? Vale a pena?](docs/estudo-de-caso-e-bom-vale-a-pena.md): o site para o qual estes dados foram coletados.
 - [catalogo-produtos-ecommerce-brasil](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil): os produtos a que estes reviews pertencem.
+- [lojas-virtuais-brasil](https://github.com/CaiqueDourado/lojas-virtuais-brasil): 63.974 lojas virtuais brasileiras com plataforma e reputação no Reclame Aqui ([Kaggle](https://www.kaggle.com/datasets/caiquedourado/lojas-virtuais-brasil)).
 - [DedupKit](https://github.com/CaiqueDourado/DedupKit): as chaves de casamento, com o bug do fingerprint corrigido.
 - [nomes-e-sobrenomes-brasil](https://github.com/CaiqueDourado/nomes-e-sobrenomes-brasil): as mesmas chaves aplicadas a nomes.
 
