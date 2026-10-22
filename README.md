@@ -4,6 +4,7 @@
 [![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey.svg)](LICENSE-DATA.md)
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Kaggle](https://img.shields.io/badge/Kaggle-dataset-20BEFF.svg)](https://www.kaggle.com/datasets/caiquedourado/reviews-produtos-ptbr)
+[![Kaggle notebook](https://img.shields.io/badge/Kaggle-notebook-20BEFF.svg)](https://www.kaggle.com/code/caiquedourado/notebook-reviews-produtos-ptbr)
 
 [Leia em português](README.pt-BR.md)
 
@@ -83,7 +84,7 @@ FROM 'aspect_ratings.parquet' GROUP BY aspect HAVING count(*) > 1000 ORDER BY av
 
 ## Where the reviews came from
 
-The collection started in 2017 for **É bom? Vale a pena?** ([opiniaobomvaleapena.com.br, archived](https://web.archive.org/web/2022/https://opiniaobomvaleapena.com.br/)), a WordPress site with one page per product ("<produto> é bom? vale a pena?"), its reviews, and affiliate links to the stores. Most stores served their reviews through Bazaarvoice's JSON API; Casas Bahia, Extra and Ponto Frio through Via Varejo's own. The collection then moved to the author's crawler and data lake, where each review was linked to the store offer and to the product group, so one product's reviews from all stores could be read together, and where the pros and cons were computed for the product pages of the author's sites. Details: [methodology](docs/methodology.md). The site's story: [case study](docs/case-study-e-bom-vale-a-pena.md).
+The collection started in 2017 for **É bom? Vale a pena?** ([opiniaobomvaleapena.com.br, archived](https://web.archive.org/web/20230106180533/https://opiniaobomvaleapena.com.br/)), a WordPress site with one page per product ("<produto> é bom? vale a pena?"), its reviews, and affiliate links to the stores. Most stores served their reviews through Bazaarvoice's JSON API; Casas Bahia, Extra and Ponto Frio through Via Varejo's own. The collection then moved to the author's crawler and data lake, where each review was linked to the store offer and to the product group, so one product's reviews from all stores could be read together, and where the pros and cons were computed for the product pages of the author's sites. Details: [methodology](docs/methodology.md). The site's story: [case study](docs/case-study-e-bom-vale-a-pena.md).
 
 ## Privacy and cleaning
 
@@ -101,7 +102,7 @@ sample/        every row of 2,000 products: reviews, sentences, aspect_ratings, 
 schema/        column definitions and dataset metadata
 scripts/       exportar_reviews.py (SQL Server → Parquet), perfil_reviews.py, build_reviews.py, nomes_grupos.py,
                validate.py, docs.py, make_figures.py
-notebooks/     eda.ipynb
+notebooks/     eda.ipynb (also on Kaggle: https://www.kaggle.com/code/caiquedourado/notebook-reviews-produtos-ptbr)
 docs/          data dictionary, methodology, data quality, Kaggle description, images
 kaggle/        dataset-metadata.json
 stats.json     counts of every build step

@@ -28,7 +28,7 @@ On top of the reviews, the 2020 pipeline that turned them into pros and cons:
 
 Nicknames, cities and author ids were never exported. E-mails, phone numbers and CPF-like numbers inside the texts are masked. About 28% of the texts had lost every ã/õ in collection ("nao", "funçao"); those words were restored from intact texts and the original kept in `text_original`. Sentiment is per review, not per clause, so a cons list can contain a positive clause from a negative review: the data quality report explains this and the other limits.
 
-Methodology, data quality report, data dictionary (EN and PT), build scripts and a sample: **https://github.com/CaiqueDourado/reviews-produtos-ptbr**
+Methodology, data quality report, data dictionary (EN and PT), build scripts and a sample: **https://github.com/CaiqueDourado/reviews-produtos-ptbr**. Starter notebook (sentiment × stars, aspects, pros and cons of one product): [notebook-reviews-produtos-ptbr](https://www.kaggle.com/code/caiquedourado/notebook-reviews-produtos-ptbr).
 
 ## Related
 

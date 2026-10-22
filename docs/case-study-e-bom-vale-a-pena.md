@@ -2,7 +2,7 @@
 
 [Leia em português](estudo-de-caso-e-bom-vale-a-pena.md)
 
-*opiniaobomvaleapena.com.br, 2017–2022 · [Web Archive copy](https://web.archive.org/web/2022/https://opiniaobomvaleapena.com.br/)*
+*opiniaobomvaleapena.com.br, 2017–2022 · [Web Archive copy](https://web.archive.org/web/20230106180533/https://opiniaobomvaleapena.com.br/)*
 
 ## The idea
 

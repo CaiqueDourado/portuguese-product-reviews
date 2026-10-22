@@ -4,6 +4,7 @@
 [![Dados: CC BY 4.0](https://img.shields.io/badge/dados-CC%20BY%204.0-lightgrey.svg)](LICENSE-DATA.md)
 [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-blue.svg)](LICENSE)
 [![Kaggle](https://img.shields.io/badge/Kaggle-dataset-20BEFF.svg)](https://www.kaggle.com/datasets/caiquedourado/reviews-produtos-ptbr)
+[![Notebook no Kaggle](https://img.shields.io/badge/Kaggle-notebook-20BEFF.svg)](https://www.kaggle.com/code/caiquedourado/notebook-reviews-produtos-ptbr)
 
 [Read in English](README.md)
 
@@ -83,7 +84,7 @@ FROM 'aspect_ratings.parquet' GROUP BY aspect HAVING count(*) > 1000 ORDER BY me
 
 ## De onde vieram os reviews
 
-A coleta começou em 2017 para o **É bom? Vale a pena?** ([opiniaobomvaleapena.com.br, arquivado](https://web.archive.org/web/2022/https://opiniaobomvaleapena.com.br/)). Era um site em WordPress com uma página por produto ("<produto> é bom? vale a pena?"), os reviews desse produto e links de afiliado para as lojas. A maioria das lojas entregava os reviews pela API em JSON da Bazaarvoice. Casas Bahia, Extra e Ponto Frio entregavam pela API própria da Via Varejo.
+A coleta começou em 2017 para o **É bom? Vale a pena?** ([opiniaobomvaleapena.com.br, arquivado](https://web.archive.org/web/20230106180533/https://opiniaobomvaleapena.com.br/)). Era um site em WordPress com uma página por produto ("<produto> é bom? vale a pena?"), os reviews desse produto e links de afiliado para as lojas. A maioria das lojas entregava os reviews pela API em JSON da Bazaarvoice. Casas Bahia, Extra e Ponto Frio entregavam pela API própria da Via Varejo.
 
 Depois, a coleta passou para o crawler e o data lake do autor. Lá, cada review foi ligado à oferta da loja e ao grupo de produto, para que os reviews de um produto em todas as lojas fossem lidos juntos. Foi também no data lake que os prós e contras foram calculados, para as páginas de produto dos sites do autor. Detalhes na [metodologia](docs/methodology.md) (em inglês). A história do site está no [estudo de caso](docs/estudo-de-caso-e-bom-vale-a-pena.md).
 
@@ -103,7 +104,7 @@ sample/        todas as linhas de 2.000 produtos: reviews, sentences, aspect_rat
 schema/        definição das colunas e metadados
 scripts/       exportar_reviews.py (SQL Server → Parquet), perfil_reviews.py, build_reviews.py, nomes_grupos.py,
                validate.py, docs.py, make_figures.py
-notebooks/     eda.ipynb
+notebooks/     eda.ipynb (também no Kaggle: https://www.kaggle.com/code/caiquedourado/notebook-reviews-produtos-ptbr)
 docs/          dicionário de dados, metodologia, qualidade, descrição do Kaggle, imagens
 kaggle/        dataset-metadata.json
 stats.json     contagens de cada etapa do build

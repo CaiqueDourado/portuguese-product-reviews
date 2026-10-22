@@ -2,7 +2,7 @@
 
 [Read in English](case-study-e-bom-vale-a-pena.md)
 
-*opiniaobomvaleapena.com.br, 2017 a 2022 · [cópia no Web Archive](https://web.archive.org/web/2022/https://opiniaobomvaleapena.com.br/)*
+*opiniaobomvaleapena.com.br, 2017 a 2022 · [cópia no Web Archive](https://web.archive.org/web/20230106180533/https://opiniaobomvaleapena.com.br/)*
 
 ## A ideia
 
