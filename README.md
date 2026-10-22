@@ -52,7 +52,7 @@ Two products of the sample, with their pros and cons as computed (`pros_cons` jo
 
 **Smartphone Samsung Galaxy Gran 2 Duos** (group 725383, 801 reviews, 3.17 stars): pros *Muito bom · Fácil de usar · Ela adorou · Entrega rápida*; cons *Nao recomendo · Veio com defeito · Péssimo produto · Trava muito*.
 
-"A entrega foi bem rápida" among the notebook's cons shows the method's main limit: sentiment is per review, so every clause of a negative review counts against the product. The [data quality report](docs/data-quality.md) covers this and the others.
+"A entrega foi bem rápida" among the notebook's cons shows the method's main limit: sentiment is per review, so every clause of a negative review counts against the product. The [data quality report](docs/data-quality.md) covers this and the others. The [pros-e-contras-ptbr](https://github.com/CaiqueDourado/pros-e-contras-ptbr) library scores each clause instead: on 51 held-out products, right cons go from 64.7% to 89.7% ([article](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/article-pros-and-cons.md)).
 
 ## Sentiment against stars
 
@@ -83,7 +83,7 @@ FROM 'aspect_ratings.parquet' GROUP BY aspect HAVING count(*) > 1000 ORDER BY av
 
 ## Where the reviews came from
 
-The collection started in 2017 for **É bom? Vale a pena?** ([opiniaobomvaleapena.com.br, archived](https://web.archive.org/web/2022/https://opiniaobomvaleapena.com.br/)), a WordPress site with one page per product ("<produto> é bom? vale a pena?"), its reviews, and affiliate links to the stores. Most stores served their reviews through Bazaarvoice's JSON API; Casas Bahia, Extra and Ponto Frio through Via Varejo's own. The collection then moved to the author's crawler and data lake, where each review was linked to the store offer and to the product group, so one product's reviews from all stores could be read together, and where the pros and cons were computed for the product pages of the author's sites. Details: [methodology](docs/methodology.md).
+The collection started in 2017 for **É bom? Vale a pena?** ([opiniaobomvaleapena.com.br, archived](https://web.archive.org/web/2022/https://opiniaobomvaleapena.com.br/)), a WordPress site with one page per product ("<produto> é bom? vale a pena?"), its reviews, and affiliate links to the stores. Most stores served their reviews through Bazaarvoice's JSON API; Casas Bahia, Extra and Ponto Frio through Via Varejo's own. The collection then moved to the author's crawler and data lake, where each review was linked to the store offer and to the product group, so one product's reviews from all stores could be read together, and where the pros and cons were computed for the product pages of the author's sites. Details: [methodology](docs/methodology.md). The site's story: [case study](docs/case-study-e-bom-vale-a-pena.md).
 
 ## Privacy and cleaning
 
@@ -109,7 +109,8 @@ stats.json     counts of every build step
 
 ## Related
 
-- [pros-e-contras-ptbr](https://github.com/CaiqueDourado/pros-e-contras-ptbr): the 2020 method as a Python library, plus clause-level sentiment.
+- [pros-e-contras-ptbr](https://github.com/CaiqueDourado/pros-e-contras-ptbr): the 2020 method as a Python library, plus clause-level sentiment. Articles: [clause splitting](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/article-clause-splitting.md) (Google Cloud NL × Stanford × rules) and [pros and cons](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/article-pros-and-cons.md).
+- [Case study: É bom? Vale a pena?](docs/case-study-e-bom-vale-a-pena.md): the review site this data was collected for.
 - [catalogo-produtos-ecommerce-brasil](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil): the products these reviews belong to.
 - [DedupKit](https://github.com/CaiqueDourado/DedupKit): the matching keys, with the fingerprint bug fixed.
 - [nomes-e-sobrenomes-brasil](https://github.com/CaiqueDourado/nomes-e-sobrenomes-brasil): the same keys applied to names.

@@ -35,5 +35,7 @@ Methodology, data quality report, data dictionary (EN and PT), build scripts and
 - [Catálogo de produtos do e-commerce brasileiro](https://www.kaggle.com/datasets/caiquedourado/catalogo-produtos-ecommerce-brasil)
 - [Pares de produtos para matching](https://www.kaggle.com/datasets/caiquedourado/pares-matching-produtos-ptbr)
 - [Nomes e sobrenomes do Brasil](https://www.kaggle.com/datasets/caiquedourado/nomes-e-sobrenomes-brasil) (same matching keys)
+- [pros-e-contras-ptbr](https://github.com/CaiqueDourado/pros-e-contras-ptbr): Python library with the 2020 method and clause-level polarity (right cons 64.7% → 89.7%)
+- [Case study: É bom? Vale a pena?](https://github.com/CaiqueDourado/reviews-produtos-ptbr/blob/main/docs/case-study-e-bom-vale-a-pena.md), the review site this data was collected for
 
 License: CC BY 4.0 for the compilation and derived columns; review texts belong to their authors. Version 1.0.0. Author: Caique Dourado.

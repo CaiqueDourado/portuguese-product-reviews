@@ -20,7 +20,7 @@ The reviews come from the product pages of nine Brazilian stores. Most of them u
 | Ponto Frio | 42,055 | the store's own review API (Via Varejo) |
 | Fast Shop | 10,258 | Bazaarvoice |
 
-The collection started in 2017 for **É bom? Vale a pena?** ([opiniaobomvaleapena.com.br](https://web.archive.org/web/2022/https://opiniaobomvaleapena.com.br/)), a WordPress site of product reviews with one page per product ("<produto> é bom? vale a pena?") and affiliate links. Its database kept the Bazaarvoice layout. Later the same collection moved to the author's crawler and data lake (`CrawlerNewProductReview`), where each review was linked to the store offer it came from and to the catalog's product group, so reviews of the same product from different stores could be read together. The Via Varejo stores were collected in 2017–2018 through their own API, which does not return the Bazaarvoice fields (helpfulness, moderation, locale, campaign).
+The collection started in 2017 for **É bom? Vale a pena?** ([opiniaobomvaleapena.com.br](https://web.archive.org/web/2022/https://opiniaobomvaleapena.com.br/)), a WordPress site of product reviews with one page per product ("<produto> é bom? vale a pena?") and affiliate links. Its database kept the Bazaarvoice layout. Later the same collection moved to the author's crawler and data lake (`CrawlerNewProductReview`), where each review was linked to the store offer it came from and to the catalog's product group, so reviews of the same product from different stores could be read together. The site itself is described in the [case study](case-study-e-bom-vale-a-pena.md). The Via Varejo stores were collected in 2017–2018 through their own API, which does not return the Bazaarvoice fields (helpfulness, moderation, locale, campaign).
 
 ## 2. Pros and cons (2020)
 
@@ -33,6 +33,8 @@ The method, as the author presented it in "Divisão de Sentenças + Análise de 
 5. **Top 4.** For each product group, the canonical clauses with at least two words are counted separately in POSITIVE and in NEGATIVE reviews; the 4 most mentioned of each become the pros and the cons shown on the product page, ties broken by `count_site`.
 
 The author's own note at the end of the grouping script reads "Abandonar aproximação por fingerprint": the fingerprint key could merge "produto de péssima qualidade" with "produto de ótima qualidade". See [data-quality.md](data-quality.md).
+
+The [pros-e-contras-ptbr](https://github.com/CaiqueDourado/pros-e-contras-ptbr) library reproduces these steps (`mode="2020"`) and replaces the review-level sentiment with a score per clause. Both are compared on 51 held-out products in its README; the clause cut is compared with Google Cloud NL and spaCy in [this article](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/article-clause-splitting.md).
 
 ## 3. This release (2026)
 

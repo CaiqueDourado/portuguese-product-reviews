@@ -52,7 +52,7 @@ Dois produtos da amostra, com os prós e contras como foram calculados (`pros_co
 
 **Smartphone Samsung Galaxy Gran 2 Duos** (grupo 725383, 801 reviews, 3,17 estrelas): prós *Muito bom · Fácil de usar · Ela adorou · Entrega rápida*; contras *Nao recomendo · Veio com defeito · Péssimo produto · Trava muito*.
 
-"A entrega foi bem rápida" entre os contras do notebook mostra o principal limite do método. O sentimento é do review inteiro, então toda cláusula de um review negativo conta contra o produto. O [relatório de qualidade](docs/data-quality.md) trata deste e dos outros limites.
+"A entrega foi bem rápida" entre os contras do notebook mostra o principal limite do método. O sentimento é do review inteiro, então toda cláusula de um review negativo conta contra o produto. O [relatório de qualidade](docs/data-quality.md) trata deste e dos outros limites. A biblioteca [pros-e-contras-ptbr](https://github.com/CaiqueDourado/pros-e-contras-ptbr) dá uma nota a cada cláusula: em 51 produtos separados para teste, os contras certos sobem de 64,7% para 89,7% ([artigo](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/artigo-pros-e-contras.md)).
 
 ## Sentimento × estrelas
 
@@ -85,7 +85,7 @@ FROM 'aspect_ratings.parquet' GROUP BY aspect HAVING count(*) > 1000 ORDER BY me
 
 A coleta começou em 2017 para o **É bom? Vale a pena?** ([opiniaobomvaleapena.com.br, arquivado](https://web.archive.org/web/2022/https://opiniaobomvaleapena.com.br/)). Era um site em WordPress com uma página por produto ("<produto> é bom? vale a pena?"), os reviews desse produto e links de afiliado para as lojas. A maioria das lojas entregava os reviews pela API em JSON da Bazaarvoice. Casas Bahia, Extra e Ponto Frio entregavam pela API própria da Via Varejo.
 
-Depois, a coleta passou para o crawler e o data lake do autor. Lá, cada review foi ligado à oferta da loja e ao grupo de produto, para que os reviews de um produto em todas as lojas fossem lidos juntos. Foi também no data lake que os prós e contras foram calculados, para as páginas de produto dos sites do autor. Detalhes na [metodologia](docs/methodology.md) (em inglês).
+Depois, a coleta passou para o crawler e o data lake do autor. Lá, cada review foi ligado à oferta da loja e ao grupo de produto, para que os reviews de um produto em todas as lojas fossem lidos juntos. Foi também no data lake que os prós e contras foram calculados, para as páginas de produto dos sites do autor. Detalhes na [metodologia](docs/methodology.md) (em inglês). A história do site está no [estudo de caso](docs/estudo-de-caso-e-bom-vale-a-pena.md).
 
 ## Privacidade e limpeza
 
@@ -111,7 +111,8 @@ stats.json     contagens de cada etapa do build
 
 ## Relacionados
 
-- [pros-e-contras-ptbr](https://github.com/CaiqueDourado/pros-e-contras-ptbr): o método de 2020 como biblioteca Python, com sentimento por cláusula.
+- [pros-e-contras-ptbr](https://github.com/CaiqueDourado/pros-e-contras-ptbr): o método de 2020 como biblioteca Python, com sentimento por cláusula. Artigos: [divisão em cláusulas](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/artigo-divisao-de-clausulas.md) (Google Cloud NL × Stanford × regras) e [prós e contras](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/artigo-pros-e-contras.md).
+- [Estudo de caso: É bom? Vale a pena?](docs/estudo-de-caso-e-bom-vale-a-pena.md): o site para o qual estes dados foram coletados.
 - [catalogo-produtos-ecommerce-brasil](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil): os produtos a que estes reviews pertencem.
 - [DedupKit](https://github.com/CaiqueDourado/DedupKit): as chaves de casamento, com o bug do fingerprint corrigido.
 - [nomes-e-sobrenomes-brasil](https://github.com/CaiqueDourado/nomes-e-sobrenomes-brasil): as mesmas chaves aplicadas a nomes.
