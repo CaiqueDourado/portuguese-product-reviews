@@ -13,7 +13,7 @@ review, or a store, and want something removed, open an issue: it will be remove
 
 Suggested credit:
 
-> Reviews de produtos (pt-BR) com prós e contras, by Caique Dourado, https://github.com/CaiqueDourado/reviews-produtos-ptbr, CC BY 4.0.
+> Reviews de produtos (pt-BR) com prós e contras, by Caique Dourado, https://github.com/CaiqueDourado/portuguese-product-reviews, CC BY 4.0.
 
 Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
 

@@ -68,6 +68,6 @@ Esse resumo foi para as páginas de produto e as Web Stories dos outros sites do
 
 ## Onde estão os dados e o código
 
-- [reviews-produtos-ptbr](https://github.com/CaiqueDourado/reviews-produtos-ptbr) ([Kaggle](https://www.kaggle.com/datasets/caiquedourado/reviews-produtos-ptbr)): 2,87 milhões de reviews, cláusulas e prós e contras.
+- [portuguese-product-reviews](https://github.com/CaiqueDourado/portuguese-product-reviews) ([Kaggle](https://www.kaggle.com/datasets/caiquedourado/reviews-produtos-ptbr)): 2,87 milhões de reviews, cláusulas e prós e contras.
 - [pros-e-contras-ptbr](https://github.com/CaiqueDourado/pros-e-contras-ptbr): o método de 2020 e a versão com polaridade por cláusula.
-- [catalogo-produtos-ecommerce-brasil](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil): os produtos e os grupos.
+- [brazilian-ecommerce-products](https://github.com/CaiqueDourado/brazilian-ecommerce-products): os produtos e os grupos.

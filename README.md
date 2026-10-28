@@ -1,6 +1,6 @@
-# Reviews de produtos (pt-BR) · Brazilian product reviews with pros and cons
+# Portuguese Product Reviews with Pros and Cons · Reviews de produtos (pt-BR)
 
-[![validate](https://github.com/CaiqueDourado/reviews-produtos-ptbr/actions/workflows/validate.yml/badge.svg)](https://github.com/CaiqueDourado/reviews-produtos-ptbr/actions/workflows/validate.yml)
+[![validate](https://github.com/CaiqueDourado/portuguese-product-reviews/actions/workflows/validate.yml/badge.svg)](https://github.com/CaiqueDourado/portuguese-product-reviews/actions/workflows/validate.yml)
 [![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey.svg)](LICENSE-DATA.md)
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Kaggle](https://img.shields.io/badge/Kaggle-dataset-20BEFF.svg)](https://www.kaggle.com/datasets/caiquedourado/reviews-produtos-ptbr)
@@ -80,7 +80,7 @@ SELECT aspect, count(*) AS scores, round(avg(score), 2) AS avg_score
 FROM 'aspect_ratings.parquet' GROUP BY aspect HAVING count(*) > 1000 ORDER BY avg_score;
 ```
 
-`product_id` and `group_id` join with the [catalog dataset](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil) (prices, specifications, EANs, categories).
+`product_id` and `group_id` join with the [catalog dataset](https://github.com/CaiqueDourado/brazilian-ecommerce-products) (prices, specifications, EANs, categories).
 
 ## Where the reviews came from
 
@@ -116,10 +116,10 @@ stats.json     counts of every build step
 
 - [pros-e-contras-ptbr](https://github.com/CaiqueDourado/pros-e-contras-ptbr): the 2020 method as a Python library, plus clause-level sentiment. Articles: [clause splitting](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/article-clause-splitting.md) (Google Cloud NL × Stanford × rules) and [pros and cons](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/article-pros-and-cons.md).
 - [Case study: É bom? Vale a pena?](docs/case-study-e-bom-vale-a-pena.md): the review site this data was collected for.
-- [catalogo-produtos-ecommerce-brasil](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil): the products these reviews belong to.
+- [brazilian-ecommerce-products](https://github.com/CaiqueDourado/brazilian-ecommerce-products): the products these reviews belong to.
 - [lojas-virtuais-brasil](https://github.com/CaiqueDourado/lojas-virtuais-brasil): 63,974 Brazilian online stores with platform and Reclame Aqui reputation ([Kaggle](https://www.kaggle.com/datasets/caiquedourado/lojas-virtuais-brasil)).
 - [DedupKit](https://github.com/CaiqueDourado/DedupKit): the matching keys, with the fingerprint bug fixed.
-- [nomes-e-sobrenomes-brasil](https://github.com/CaiqueDourado/nomes-e-sobrenomes-brasil): the same keys applied to names.
+- [brazilian-names-surnames](https://github.com/CaiqueDourado/brazilian-names-surnames): the same keys applied to names.
 
 ## License
 

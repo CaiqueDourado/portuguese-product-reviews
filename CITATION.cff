@@ -8,7 +8,7 @@ authors:
 version: 1.0.0
 date-released: 2026-10-22
 license: CC-BY-4.0
-repository-code: "https://github.com/CaiqueDourado/reviews-produtos-ptbr"
+repository-code: "https://github.com/CaiqueDourado/portuguese-product-reviews"
 url: "https://www.kaggle.com/datasets/caiquedourado/reviews-produtos-ptbr"
 keywords:
   - reviews

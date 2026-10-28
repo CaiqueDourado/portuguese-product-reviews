@@ -1,6 +1,6 @@
 # Reviews de produtos (pt-BR) com prós e contras
 
-[![validate](https://github.com/CaiqueDourado/reviews-produtos-ptbr/actions/workflows/validate.yml/badge.svg)](https://github.com/CaiqueDourado/reviews-produtos-ptbr/actions/workflows/validate.yml)
+[![validate](https://github.com/CaiqueDourado/portuguese-product-reviews/actions/workflows/validate.yml/badge.svg)](https://github.com/CaiqueDourado/portuguese-product-reviews/actions/workflows/validate.yml)
 [![Dados: CC BY 4.0](https://img.shields.io/badge/dados-CC%20BY%204.0-lightgrey.svg)](LICENSE-DATA.md)
 [![Código: MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-blue.svg)](LICENSE)
 [![Kaggle](https://img.shields.io/badge/Kaggle-dataset-20BEFF.svg)](https://www.kaggle.com/datasets/caiquedourado/reviews-produtos-ptbr)
@@ -80,7 +80,7 @@ SELECT aspect, count(*) AS notas, round(avg(score), 2) AS media
 FROM 'aspect_ratings.parquet' GROUP BY aspect HAVING count(*) > 1000 ORDER BY media;
 ```
 
-`product_id` e `group_id` ligam com a [base do catálogo](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil), que traz preços, ficha técnica, EANs e categorias.
+`product_id` e `group_id` ligam com a [base do catálogo](https://github.com/CaiqueDourado/brazilian-ecommerce-products), que traz preços, ficha técnica, EANs e categorias.
 
 ## De onde vieram os reviews
 
@@ -118,10 +118,10 @@ stats.json     contagens de cada etapa do build
 
 - [pros-e-contras-ptbr](https://github.com/CaiqueDourado/pros-e-contras-ptbr): o método de 2020 como biblioteca Python, com sentimento por cláusula. Artigos: [divisão em cláusulas](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/artigo-divisao-de-clausulas.md) (Google Cloud NL × Stanford × regras) e [prós e contras](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/artigo-pros-e-contras.md).
 - [Estudo de caso: É bom? Vale a pena?](docs/estudo-de-caso-e-bom-vale-a-pena.md): o site para o qual estes dados foram coletados.
-- [catalogo-produtos-ecommerce-brasil](https://github.com/CaiqueDourado/catalogo-produtos-ecommerce-brasil): os produtos a que estes reviews pertencem.
+- [brazilian-ecommerce-products](https://github.com/CaiqueDourado/brazilian-ecommerce-products): os produtos a que estes reviews pertencem.
 - [lojas-virtuais-brasil](https://github.com/CaiqueDourado/lojas-virtuais-brasil): 63.974 lojas virtuais brasileiras com plataforma e reputação no Reclame Aqui ([Kaggle](https://www.kaggle.com/datasets/caiquedourado/lojas-virtuais-brasil)).
 - [DedupKit](https://github.com/CaiqueDourado/DedupKit): as chaves de casamento, com o bug do fingerprint corrigido.
-- [nomes-e-sobrenomes-brasil](https://github.com/CaiqueDourado/nomes-e-sobrenomes-brasil): as mesmas chaves aplicadas a nomes.
+- [brazilian-names-surnames](https://github.com/CaiqueDourado/brazilian-names-surnames): as mesmas chaves aplicadas a nomes.
 
 ## Licença
 
