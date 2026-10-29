@@ -120,6 +120,7 @@ stats.json     counts of every build step
 
 ## Related
 
+- Article: [Sentence splitting + sentiment analysis = pros and cons](https://github.com/CaiqueDourado/articles/blob/main/pros-and-cons/README.md): how the clauses and pros and cons from these reviews were made, and fixed.
 - [pros-e-contras-ptbr](https://github.com/CaiqueDourado/pros-e-contras-ptbr): the 2020 method as a Python library, plus clause-level sentiment. Articles: [clause splitting](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/article-clause-splitting.md) (Google Cloud NL × Stanford × rules) and [pros and cons](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/article-pros-and-cons.md).
 - [Case study: É bom? Vale a pena?](docs/case-study-e-bom-vale-a-pena.md): the review site this data was collected for.
 - [brazilian-ecommerce-products](https://github.com/CaiqueDourado/brazilian-ecommerce-products): the products these reviews belong to.
