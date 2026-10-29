@@ -1,0 +1,907 @@
+{
+  "group": {
+    "group_id": 2679579,
+    "group_name": "Cafeteira Elétrica Arno Bevarage CAFP Preta - 12 Xícaras",
+    "reviews": 20,
+    "avg_rating": 3.55
+  },
+  "reviews": [
+    {
+      "review_id": 3139065,
+      "product_id": 17544851,
+      "store": "Magazine Luiza",
+      "rating": 2,
+      "recommended": null,
+      "title": "Não gostei!!!",
+      "text": "O café sai quase frio. Também não sabia que não vinha com o filtro. Tem que comprar. De decepcionada com o produto.",
+      "sentiment": "NEGATIVE",
+      "helpfulness": null,
+      "submitted_at": "2019-11-24 11:08:58",
+      "aspects": {
+        "Design": 2,
+        "Desempenho": 2,
+        "Recursos": 2,
+        "Facilidade de Uso": 2,
+        "Qualidade": 2
+      },
+      "clauses": [
+        {
+          "text": "O café sai quase frio",
+          "canonical": "O café sai quase frio",
+          "count_site": 3
+        },
+        {
+          "text": "Também nao sabia que nao vinha com o filtro",
+          "canonical": "Também nao sabia que nao vinha com o filtro",
+          "count_site": 1
+        },
+        {
+          "text": "Tem que comprar",
+          "canonical": "Tem que comprar",
+          "count_site": 19
+        },
+        {
+          "text": "De decepcionada com o produto",
+          "canonical": "De decepcionada com o produto",
+          "count_site": 1
+        }
+      ]
+    },
+    {
+      "review_id": 3139066,
+      "product_id": 17544851,
+      "store": "Magazine Luiza",
+      "rating": 3,
+      "recommended": false,
+      "title": "Funciona bem mas...",
+      "text": "Não possui visor para o nível de água e isso faz falta. Tampou traz instruções para a retirada do suporte do filtro para lavar. Resultado: não consigo lavar o suporte... só tento limpar com pano molhado, o que não é bom...",
+      "sentiment": "NEGATIVE",
+      "helpfulness": null,
+      "submitted_at": "2019-06-20 20:43:47",
+      "aspects": {
+        "Design": 4,
+        "Desempenho": 4,
+        "Recursos": 3,
+        "Facilidade de Uso": 2,
+        "Qualidade": 4
+      },
+      "clauses": [
+        {
+          "text": "Nao possui visor para o nível de água",
+          "canonical": "Nao possui visor para o nível de água",
+          "count_site": 1
+        },
+        {
+          "text": "Isso faz falta",
+          "canonical": "Isso faz falta",
+          "count_site": 12
+        },
+        {
+          "text": "Tampou traz instruçoes para a retirada do suporte do filtro para lavar",
+          "canonical": "Tampou traz instruçoes para a retirada do suporte do filtro para lavar",
+          "count_site": 1
+        },
+        {
+          "text": "Resultado",
+          "canonical": "Resultado",
+          "count_site": 702
+        },
+        {
+          "text": "Nao consigo lavar o suporte",
+          "canonical": "Nao consigo lavar o suporte",
+          "count_site": 1
+        },
+        {
+          "text": "Só tento limpar com pano molhado",
+          "canonical": "Só tento limpar com pano molhado",
+          "count_site": 1
+        },
+        {
+          "text": "O que nao é bom",
+          "canonical": "O que nao é bom",
+          "count_site": 6
+        }
+      ]
+    },
+    {
+      "review_id": 3139067,
+      "product_id": 17544851,
+      "store": "Magazine Luiza",
+      "rating": 2,
+      "recommended": false,
+      "title": "Regular",
+      "text": "Compacta com bom design mas falta graduação para água. A retirada do porta filtro não é prática. Mas, por enquanto, o que está desagradando mais é o cheiro de plástico que passa para o café. Pode ser por pouco uso ainda (1 semana).",
+      "sentiment": "MIXED",
+      "helpfulness": null,
+      "submitted_at": "2019-06-12 12:56:35",
+      "aspects": {
+        "Design": 4,
+        "Desempenho": 3,
+        "Recursos": 2,
+        "Facilidade de Uso": 3,
+        "Qualidade": 2
+      },
+      "clauses": [
+        {
+          "text": "Compacta com bom design",
+          "canonical": "Compacta com bom design",
+          "count_site": 1
+        },
+        {
+          "text": "Falta graduaçao para água",
+          "canonical": "Falta graduaçao para água",
+          "count_site": 1
+        },
+        {
+          "text": "A retirada do porta filtro nao é prática",
+          "canonical": "A retirada do porta filtro nao é prática",
+          "count_site": 1
+        },
+        {
+          "text": "Por enquanto",
+          "canonical": "Por enquanto",
+          "count_site": 925
+        },
+        {
+          "text": "O que está desagradando mais é o cheiro de plástico que passa para o café",
+          "canonical": "O que está desagradando mais é o cheiro de plástico que passa para o café",
+          "count_site": 1
+        },
+        {
+          "text": "Pode ser por pouco uso ainda 1 semana",
+          "canonical": "Pode ser por pouco uso ainda 1 semana",
+          "count_site": 1
+        }
+      ]
+    },
+    {
+      "review_id": 3139068,
+      "product_id": 17544851,
+      "store": "Magazine Luiza",
+      "rating": 5,
+      "recommended": true,
+      "title": "ótima!!",
+      "text": "Atendeu minhas expectativas. Rápida e deixa o café bem quentinho. A única queixa é que infelizmente não vem o filtro. Mas, de qualquer maneira, gostei muito.",
+      "sentiment": "POSITIVE",
+      "helpfulness": null,
+      "submitted_at": "2019-06-06 12:48:58",
+      "aspects": {
+        "Design": 5,
+        "Desempenho": 5,
+        "Recursos": 5,
+        "Facilidade de Uso": 5,
+        "Qualidade": 5
+      },
+      "clauses": [
+        {
+          "text": "Atendeu minhas expectativas",
+          "canonical": "Atendeu minhas expectativas",
+          "count_site": 9753
+        },
+        {
+          "text": "Rápida",
+          "canonical": "Rápida",
+          "count_site": 5483
+        },
+        {
+          "text": "Deixa o café bem quentinho",
+          "canonical": "Deixa o café bem quentinho",
+          "count_site": 5
+        },
+        {
+          "text": "A única queixa é que infelizmente nao vem o filtro",
+          "canonical": "A única queixa é que infelizmente nao vem o filtro",
+          "count_site": 1
+        },
+        {
+          "text": "De qualquer maneira",
+          "canonical": "De qualquer maneira",
+          "count_site": 61
+        },
+        {
+          "text": "Gostei muito",
+          "canonical": "Gostei muito",
+          "count_site": 30136
+        }
+      ]
+    },
+    {
+      "review_id": 3139069,
+      "product_id": 17544851,
+      "store": "Magazine Luiza",
+      "rating": 5,
+      "recommended": true,
+      "title": "bom custo/benefício",
+      "text": "É uma cafeteira simples e bem prática. Não sou exigente com relação a café, mas é um ótimo custo benefício.",
+      "sentiment": "POSITIVE",
+      "helpfulness": null,
+      "submitted_at": "2018-07-28 12:53:25",
+      "aspects": {
+        "Design": 5,
+        "Desempenho": 5,
+        "Recursos": 3,
+        "Facilidade de Uso": 5,
+        "Qualidade": 5
+      },
+      "clauses": [
+        {
+          "text": "É uma cafeteira simples",
+          "canonical": "É uma cafeteira simples",
+          "count_site": 3
+        },
+        {
+          "text": "Bem prática",
+          "canonical": "Bem prática",
+          "count_site": 263
+        },
+        {
+          "text": "Nao sou exigente com relaçao a café",
+          "canonical": "Nao sou exigente com relaçao a café",
+          "count_site": 1
+        },
+        {
+          "text": "É um ótimo custo benefício",
+          "canonical": "Otimo custo-benefício",
+          "count_site": 139
+        }
+      ]
+    },
+    {
+      "review_id": 3139070,
+      "product_id": 17544851,
+      "store": "Magazine Luiza",
+      "rating": 3,
+      "recommended": true,
+      "title": "Bom produto. Atende ao esperado.",
+      "text": "Bom produto. Atende ao esperado. Não tem linhas de medição na jarra. Não tem filtro de plastico e nem medidor para o café. Bobagens que poderiam dar mas qualidade ao produto.",
+      "sentiment": "MIXED",
+      "helpfulness": null,
+      "submitted_at": "2018-05-08 20:20:01",
+      "aspects": {
+        "Design": 4,
+        "Desempenho": 4,
+        "Recursos": 2,
+        "Facilidade de Uso": 3,
+        "Qualidade": 4
+      },
+      "clauses": [
+        {
+          "text": "Bom produto",
+          "canonical": "Bom produto",
+          "count_site": 12709
+        },
+        {
+          "text": "Atende ao esperado",
+          "canonical": "Atende ao esperado",
+          "count_site": 130
+        },
+        {
+          "text": "Nao tem linhas de mediçao na jarra",
+          "canonical": "Nao tem linhas de mediçao na jarra",
+          "count_site": 1
+        },
+        {
+          "text": "Nao tem filtro de plastico",
+          "canonical": "Nao tem filtro de plastico",
+          "count_site": 1
+        },
+        {
+          "text": "Nem medidor para o café",
+          "canonical": "Nem medidor para o café",
+          "count_site": 1
+        },
+        {
+          "text": "Bobagens que poderiam dar",
+          "canonical": "Bobagens que poderiam dar",
+          "count_site": 1
+        },
+        {
+          "text": "Qualidade ao produto",
+          "canonical": "Qualidade ao produto",
+          "count_site": 3
+        }
+      ]
+    },
+    {
+      "review_id": 3139071,
+      "product_id": 17544851,
+      "store": "Magazine Luiza",
+      "rating": 1,
+      "recommended": false,
+      "title": "ruim",
+      "text": "Não gostei não veio filtro e nem o medidor fora que não tem marcador nível de água",
+      "sentiment": "NEGATIVE",
+      "helpfulness": null,
+      "submitted_at": "2018-05-08 13:30:33",
+      "aspects": {
+        "Design": 1,
+        "Desempenho": 1,
+        "Recursos": 1,
+        "Facilidade de Uso": 1,
+        "Qualidade": 1
+      },
+      "clauses": [
+        {
+          "text": "Nao gostei nao veio filtro",
+          "canonical": "Nao gostei nao veio filtro",
+          "count_site": 1
+        },
+        {
+          "text": "Nem o medidor fora que nao tem marcador nível de água",
+          "canonical": "Nem o medidor fora que nao tem marcador nível de água",
+          "count_site": 1
+        }
+      ]
+    },
+    {
+      "review_id": 3139072,
+      "product_id": 17544851,
+      "store": "Magazine Luiza",
+      "rating": 5,
+      "recommended": true,
+      "title": "Cafeteira",
+      "text": "Muito boa , super recomendo \nMuito linda bom preco e boa a qualidade",
+      "sentiment": "POSITIVE",
+      "helpfulness": null,
+      "submitted_at": "2018-04-19 13:00:58",
+      "aspects": {},
+      "clauses": [
+        {
+          "text": "Muito boa",
+          "canonical": "Muito boa",
+          "count_site": 11676
+        },
+        {
+          "text": "Super recomendo muito linda bom preco",
+          "canonical": "Super recomendo muito linda bom preco",
+          "count_site": 1
+        },
+        {
+          "text": "Boa a qualidade",
+          "canonical": "Boa a qualidade",
+          "count_site": 12
+        }
+      ]
+    },
+    {
+      "review_id": 3139074,
+      "product_id": 17544851,
+      "store": "Magazine Luiza",
+      "rating": 1,
+      "recommended": true,
+      "title": "horrivel",
+      "text": "Produto fraco, a valvula solta, fazendo com que derrame o cafe.",
+      "sentiment": "NEGATIVE",
+      "helpfulness": null,
+      "submitted_at": "2017-12-30 11:13:04",
+      "aspects": {
+        "Design": 1,
+        "Desempenho": 1,
+        "Recursos": 1,
+        "Facilidade de Uso": 1,
+        "Qualidade": 1
+      },
+      "clauses": [
+        {
+          "text": "Produto fraco",
+          "canonical": "Produto fraco",
+          "count_site": 319
+        },
+        {
+          "text": "A valvula solta",
+          "canonical": "A valvula solta",
+          "count_site": 1
+        },
+        {
+          "text": "Fazendo com que derrame o cafe",
+          "canonical": "Fazendo com que derrame o cafe",
+          "count_site": 1
+        }
+      ]
+    },
+    {
+      "review_id": 3139075,
+      "product_id": 17544851,
+      "store": "Magazine Luiza",
+      "rating": 4,
+      "recommended": true,
+      "title": "Bom custo-benefício",
+      "text": "A cafeteira não possui nível de água do reservatório, ou seja, vc tem que saber a quantidade de xíc/mL (isso está no manual, mas não custava nada colocar um visor né?). A parte do filtro esquenta demais a ponto de vc se queimar e o plástico é muito maleável. Infelizmente já é feita pra não durar muito. No geral ela cumpri o que promete, o café é feito muito rápido.",
+      "sentiment": "NEGATIVE",
+      "helpfulness": null,
+      "submitted_at": "2017-11-27 01:13:29",
+      "aspects": {
+        "Design": 3,
+        "Desempenho": 5,
+        "Recursos": 3,
+        "Facilidade de Uso": 5,
+        "Qualidade": 3
+      },
+      "clauses": [
+        {
+          "text": "A cafeteira nao possui nível de água do reservatório",
+          "canonical": "A cafeteira nao possui nível de água do reservatório",
+          "count_site": 1
+        },
+        {
+          "text": "Seja",
+          "canonical": "Seja",
+          "count_site": 8019
+        },
+        {
+          "text": "Vc tem que saber a quantidade de xíc/ml isso está no manual",
+          "canonical": "Vc tem que saber a quantidade de xíc/ml isso está no manual",
+          "count_site": 1
+        },
+        {
+          "text": "Nao custava nada colocar um visor né",
+          "canonical": "Nao custava nada colocar um visor né",
+          "count_site": 1
+        },
+        {
+          "text": "A parte do filtro esquenta demais a ponto de vc se queimar",
+          "canonical": "A parte do filtro esquenta demais a ponto de vc se queimar",
+          "count_site": 1
+        },
+        {
+          "text": "O plástico é muito maleável",
+          "canonical": "O plástico é muito maleável",
+          "count_site": 1
+        },
+        {
+          "text": "Infelizmente já é feita pra nao durar muito",
+          "canonical": "Infelizmente já é feita pra nao durar muito",
+          "count_site": 1
+        },
+        {
+          "text": "No geral ela cumpri o que promete",
+          "canonical": "No geral ela cumpri o que promete",
+          "count_site": 1
+        },
+        {
+          "text": "O café é feito muito rápido",
+          "canonical": "O café é feito muito rápido",
+          "count_site": 3
+        }
+      ]
+    },
+    {
+      "review_id": 3139076,
+      "product_id": 17544851,
+      "store": "Magazine Luiza",
+      "rating": 5,
+      "recommended": true,
+      "title": "Ótima Compra",
+      "text": "Otimo produto para quem quer preparar um café rápido, seja para uma ou várias pessoas! Produto muito simples de se manusear. Otimo custo-benefício.",
+      "sentiment": "POSITIVE",
+      "helpfulness": null,
+      "submitted_at": "2017-08-06 01:02:16",
+      "aspects": {
+        "Design": 3,
+        "Desempenho": 5,
+        "Recursos": 5,
+        "Facilidade de Uso": 5,
+        "Qualidade": 5
+      },
+      "clauses": [
+        {
+          "text": "Otimo produto para quem quer preparar um café rápido",
+          "canonical": "Otimo produto para quem quer preparar um café rápido",
+          "count_site": 1
+        },
+        {
+          "text": "Seja para uma",
+          "canonical": "Seja para uma",
+          "count_site": 1
+        },
+        {
+          "text": "Várias pessoas",
+          "canonical": "Várias pessoas",
+          "count_site": 3
+        },
+        {
+          "text": "Produto muito simples de se manusear",
+          "canonical": "Produto muito simples de se manusear",
+          "count_site": 1
+        },
+        {
+          "text": "Otimo custo-benefício",
+          "canonical": "Otimo custo-benefício",
+          "count_site": 1284
+        }
+      ]
+    },
+    {
+      "review_id": 3139078,
+      "product_id": 17544851,
+      "store": "Magazine Luiza",
+      "rating": 2,
+      "recommended": false,
+      "title": "Filtro de papel dobra.",
+      "text": "O filtro de papel dobra quando a água fervente está caindo e essa água acaba escorrendo por fora do filtro. Além disso, o modelo é sugestivo de que viria com filtro removível, o que não ocorreu. Também não encontramos no mercado, um fitro reutilizável em tamanho que caiba na cafeteira.",
+      "sentiment": "NEGATIVE",
+      "helpfulness": null,
+      "submitted_at": "2017-08-04 18:45:45",
+      "aspects": {
+        "Design": 2,
+        "Desempenho": 2,
+        "Recursos": 2,
+        "Facilidade de Uso": 1,
+        "Qualidade": 3
+      },
+      "clauses": [
+        {
+          "text": "O filtro de papel dobra quando a água fervente está caindo",
+          "canonical": "O filtro de papel dobra quando a água fervente está caindo",
+          "count_site": 1
+        },
+        {
+          "text": "Essa água acaba escorrendo por fora do filtro",
+          "canonical": "Essa água acaba escorrendo por fora do filtro",
+          "count_site": 1
+        },
+        {
+          "text": "Além disso",
+          "canonical": "Além disso",
+          "count_site": 4744
+        },
+        {
+          "text": "O modelo é sugestivo de que viria com filtro removível",
+          "canonical": "O modelo é sugestivo de que viria com filtro removível",
+          "count_site": 1
+        },
+        {
+          "text": "O que nao ocorreu",
+          "canonical": "O que nao ocorreu",
+          "count_site": 21
+        },
+        {
+          "text": "Também nao encontramos no mercado",
+          "canonical": "Também nao encontramos no mercado",
+          "count_site": 1
+        },
+        {
+          "text": "Um fitro reutilizável em tamanho que caiba na cafeteira",
+          "canonical": "Um fitro reutilizável em tamanho que caiba na cafeteira",
+          "count_site": 1
+        }
+      ]
+    },
+    {
+      "review_id": 3139080,
+      "product_id": 17544851,
+      "store": "Magazine Luiza",
+      "rating": 4,
+      "recommended": true,
+      "title": "uso",
+      "text": "Produto de fácil manuseio, ótimo desempenho e rapidez no preparo.",
+      "sentiment": "POSITIVE",
+      "helpfulness": null,
+      "submitted_at": "2017-07-31 19:52:10",
+      "aspects": {
+        "Design": 4,
+        "Desempenho": 4,
+        "Recursos": 4,
+        "Facilidade de Uso": 4,
+        "Qualidade": 4
+      },
+      "clauses": [
+        {
+          "text": "Produto de fácil manuseio",
+          "canonical": "Produto de fácil manuseio",
+          "count_site": 692
+        },
+        {
+          "text": "Ótimo desempenho",
+          "canonical": "Ótimo desempenho",
+          "count_site": 1663
+        },
+        {
+          "text": "Rapidez no preparo",
+          "canonical": "Rapidez no preparo",
+          "count_site": 22
+        }
+      ]
+    },
+    {
+      "review_id": 3139081,
+      "product_id": 17544851,
+      "store": "Magazine Luiza",
+      "rating": 4,
+      "recommended": true,
+      "title": "4",
+      "text": "O café fica bem quente e de boa qualidade e preço bom..",
+      "sentiment": "POSITIVE",
+      "helpfulness": null,
+      "submitted_at": "2017-06-13 20:21:40",
+      "aspects": {
+        "Design": 5,
+        "Desempenho": 5,
+        "Recursos": 5,
+        "Facilidade de Uso": 4,
+        "Qualidade": 5
+      },
+      "clauses": [
+        {
+          "text": "O café fica bem quente",
+          "canonical": "O café fica bem quente",
+          "count_site": 19
+        },
+        {
+          "text": "De boa qualidade",
+          "canonical": "De boa qualidade",
+          "count_site": 7419
+        },
+        {
+          "text": "Preço bom",
+          "canonical": "Preço bom",
+          "count_site": 4187
+        }
+      ]
+    },
+    {
+      "review_id": 3139082,
+      "product_id": 17544851,
+      "store": "Magazine Luiza",
+      "rating": 5,
+      "recommended": true,
+      "title": "Cafeteira Elétrica Arno",
+      "text": "Produto simples sem recursos especiais , que , porem cumpre sua função.",
+      "sentiment": "POSITIVE",
+      "helpfulness": null,
+      "submitted_at": "2017-06-06 01:00:53",
+      "aspects": {
+        "Design": 3,
+        "Desempenho": 5,
+        "Recursos": 3,
+        "Facilidade de Uso": 5,
+        "Qualidade": 5
+      },
+      "clauses": [
+        {
+          "text": "Produto simples sem recursos especiais",
+          "canonical": "Produto simples sem recursos especiais",
+          "count_site": 1
+        },
+        {
+          "text": "Que",
+          "canonical": "Que",
+          "count_site": 611
+        },
+        {
+          "text": "Porem cumpre sua funçao",
+          "canonical": "Porem cumpre sua funçao",
+          "count_site": 1
+        }
+      ]
+    },
+    {
+      "review_id": 3139083,
+      "product_id": 17544851,
+      "store": "Magazine Luiza",
+      "rating": 1,
+      "recommended": true,
+      "title": "Deixou a desejar",
+      "text": "Não estamos satisfeitos com o produto pois o mesmo não tem medidor de nível de agua na lateral, vc tem que literalmente chutar que está fazendo por exemplo 8 xicaras de café... não recomendo.",
+      "sentiment": "NEGATIVE",
+      "helpfulness": 0.705882,
+      "submitted_at": "2015-05-23 01:00:00",
+      "aspects": {},
+      "clauses": [
+        {
+          "text": "Nao estamos satisfeitos com o produto",
+          "canonical": "Nao estamos satisfeitos com o produto",
+          "count_site": 3
+        },
+        {
+          "text": "O mesmo nao tem medidor de nível de agua na lateral",
+          "canonical": "O mesmo nao tem medidor de nível de agua na lateral",
+          "count_site": 1
+        },
+        {
+          "text": "Vc tem que literalmente chutar que está fazendo por exemplo 8 xicaras de café",
+          "canonical": "Vc tem que literalmente chutar que está fazendo por exemplo 8 xicaras de café",
+          "count_site": 1
+        },
+        {
+          "text": "Nao recomendo",
+          "canonical": "Nao recomendo",
+          "count_site": 13449
+        }
+      ]
+    },
+    {
+      "review_id": 4389879,
+      "product_id": 17547264,
+      "store": "Magazine Luiza",
+      "rating": 4,
+      "recommended": true,
+      "title": "Muito bom",
+      "text": "Os produtos adquiridos,supriu minhas necessidades.",
+      "sentiment": "POSITIVE",
+      "helpfulness": null,
+      "submitted_at": "2018-03-10 10:41:48",
+      "aspects": {},
+      "clauses": [
+        {
+          "text": "Os produtos adquiridos",
+          "canonical": "Os produtos adquiridos",
+          "count_site": 5
+        },
+        {
+          "text": "Supriu minhas necessidades",
+          "canonical": "Supriu minhas necessidades",
+          "count_site": 495
+        }
+      ]
+    },
+    {
+      "review_id": 4389880,
+      "product_id": 17547264,
+      "store": "Magazine Luiza",
+      "rating": 5,
+      "recommended": true,
+      "title": "Excelente compra!",
+      "text": "Ainda não testei o produto recebido, pois será um presente de Natal.\nMas já conheço o produto, tenho uma em casa. É uma cafeteira excelente! Atende muito bem às minhas necessidades! E por esse preço, melhor ainda!!!\nE sobre a entrega, também excelente!!!",
+      "sentiment": "POSITIVE",
+      "helpfulness": null,
+      "submitted_at": "2017-12-05 10:37:26",
+      "aspects": {
+        "Qualidade": 5
+      },
+      "clauses": [
+        {
+          "text": "Ainda nao testei o produto recebido",
+          "canonical": "Ainda nao testei o produto recebido",
+          "count_site": 1
+        },
+        {
+          "text": "Será um presente de natal",
+          "canonical": "Será um presente de natal",
+          "count_site": 2
+        },
+        {
+          "text": "Já conheço o produto",
+          "canonical": "Já conheço o produto",
+          "count_site": 128
+        },
+        {
+          "text": "Tenho uma em casa",
+          "canonical": "Tenho uma em casa",
+          "count_site": 11
+        },
+        {
+          "text": "É uma cafeteira excelente",
+          "canonical": "É uma cafeteira excelente",
+          "count_site": 4
+        },
+        {
+          "text": "Atende muito bem às minhas necessidades",
+          "canonical": "Atende muito bem às minhas necessidades",
+          "count_site": 29
+        },
+        {
+          "text": "Por esse preço",
+          "canonical": "Por esse preço",
+          "count_site": 113
+        },
+        {
+          "text": "Melhor ainda",
+          "canonical": "Melhor ainda",
+          "count_site": 448
+        },
+        {
+          "text": "Sobre a entrega",
+          "canonical": "Sobre a entrega",
+          "count_site": 694
+        },
+        {
+          "text": "Também excelente",
+          "canonical": "Também excelente",
+          "count_site": 40
+        }
+      ]
+    },
+    {
+      "review_id": 4389881,
+      "product_id": 17547264,
+      "store": "Magazine Luiza",
+      "rating": 5,
+      "recommended": true,
+      "title": "Cafeteira arno",
+      "text": "Excelente produto entrega super rápida recomendo a todos",
+      "sentiment": "POSITIVE",
+      "helpfulness": null,
+      "submitted_at": "2017-07-18 19:03:08",
+      "aspects": {
+        "Qualidade": 5
+      },
+      "clauses": [
+        {
+          "text": "Excelente produto entrega super rápida recomendo a todos",
+          "canonical": "Excelente produto entrega super rápida recomendo a todos",
+          "count_site": 3
+        }
+      ]
+    },
+    {
+      "review_id": 4389882,
+      "product_id": 17547264,
+      "store": "Magazine Luiza",
+      "rating": 5,
+      "recommended": true,
+      "title": "Ótima cafeteira",
+      "text": "Produto chegou em ótimo estado! dentro do prazo estipulado.",
+      "sentiment": "POSITIVE",
+      "helpfulness": null,
+      "submitted_at": "2016-11-07 16:52:51",
+      "aspects": {
+        "Qualidade": 5
+      },
+      "clauses": [
+        {
+          "text": "Produto chegou em ótimo estado",
+          "canonical": "Produto chegou em ótimo estado",
+          "count_site": 208
+        },
+        {
+          "text": "Dentro do prazo estipulado",
+          "canonical": "Dentro do prazo estipulado",
+          "count_site": 177
+        }
+      ]
+    }
+  ],
+  "pros": [
+    {
+      "clause": "Otimo custo-benefício",
+      "mentions": 2,
+      "count_site": 1284,
+      "example_review_id": 3139069
+    },
+    {
+      "clause": "Gostei muito",
+      "mentions": 1,
+      "count_site": 30136,
+      "example_review_id": 3139068
+    },
+    {
+      "clause": "Muito boa",
+      "mentions": 1,
+      "count_site": 11676,
+      "example_review_id": 3139072
+    },
+    {
+      "clause": "Atendeu minhas expectativas",
+      "mentions": 1,
+      "count_site": 9753,
+      "example_review_id": 3139068
+    }
+  ],
+  "cons": [
+    {
+      "clause": "Nao recomendo",
+      "mentions": 1,
+      "count_site": 13449,
+      "example_review_id": 3139083
+    },
+    {
+      "clause": "Além disso",
+      "mentions": 1,
+      "count_site": 4744,
+      "example_review_id": 3139078
+    },
+    {
+      "clause": "Produto fraco",
+      "mentions": 1,
+      "count_site": 319,
+      "example_review_id": 3139074
+    },
+    {
+      "clause": "O que nao ocorreu",
+      "mentions": 1,
+      "count_site": 21,
+      "example_review_id": 3139078
+    }
+  ]
+}

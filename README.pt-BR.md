@@ -24,6 +24,12 @@ A base é cerca de 22 vezes maior que a B2W-Reviews01, a base de reviews em port
 
 Os arquivos completos (Parquet) estão no [Kaggle](https://www.kaggle.com/datasets/caiquedourado/reviews-produtos-ptbr). Este repositório tem os scripts, a documentação e a pasta `sample/`, com todas as linhas de 2.000 produtos sorteados (21.939 reviews).
 
+## Como um produto é estruturado
+
+![Um produto com seus reviews em JSON](docs/img/product-json.png)
+
+Um produto de `sample/` em JSON aninhado: o grupo 2679579, uma cafeteira elétrica Arno com 20 reviews e média de 3,55 estrelas. Cada review traz as estrelas, o sentimento da AWS, as notas por aspecto e as cláusulas em que foi cortado, com quantas vezes cada cláusula aparece no site inteiro (`count_site`); os 4 prós e 4 contras do produto saem dessas cláusulas. Registro completo: [docs/example-product.json](docs/example-product.json), gerado por [scripts/make_json.py](scripts/make_json.py).
+
 ## Como os prós e contras foram feitos
 
 ![Os cinco passos](docs/img/flow.pt-BR.png)

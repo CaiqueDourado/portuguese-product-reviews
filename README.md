@@ -24,6 +24,12 @@ It is about 22 times the size of B2W-Reviews01, the best-known Portuguese review
 
 The full files (Parquet) are on [Kaggle](https://www.kaggle.com/datasets/caiquedourado/reviews-produtos-ptbr). This repository has the scripts, the documentation and `sample/`: every row of 2,000 random products (21,939 reviews).
 
+## How a product is structured
+
+![One product with its reviews in JSON](docs/img/product-json.png)
+
+One product from `sample/` as nested JSON: group 2679579, an Arno electric coffee maker with 20 reviews and 3.55 stars on average. Each review keeps its stars, AWS sentiment, aspect scores and the clauses it was cut into, with how many times each clause appears across the site (`count_site`); the product's top 4 pros and 4 cons are picked from those clauses. Full record: [docs/example-product.json](docs/example-product.json), built by [scripts/make_json.py](scripts/make_json.py).
+
 ## How the pros and cons were made
 
 ![The five steps](docs/img/flow.png)

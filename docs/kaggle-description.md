@@ -30,6 +30,12 @@ The collection started in 2017 for **É bom? Vale a pena?** ([archived](https://
 
 `product_id` and `group_id` join with the [catalog of Brazilian e-commerce products](https://www.kaggle.com/datasets/caiquedourado/catalogo-produtos-ecommerce-brasil) (prices, specifications, EANs).
 
+## How a product is structured
+
+![One product with its reviews in JSON](https://raw.githubusercontent.com/CaiqueDourado/portuguese-product-reviews/main/docs/img/product-json.png)
+
+One product from the GitHub sample as nested JSON: group 2679579, an Arno electric coffee maker with 20 reviews and 3.55 stars on average. Each review keeps its stars, AWS sentiment, aspect scores and the clauses it was cut into, with how many times each clause appears across the site (`count_site`); the product's top 4 pros and 4 cons are picked from those clauses. Full record: [docs/example-product.json](https://github.com/CaiqueDourado/portuguese-product-reviews/blob/main/docs/example-product.json), built by [scripts/make_json.py](https://github.com/CaiqueDourado/portuguese-product-reviews/blob/main/scripts/make_json.py).
+
 ## Cleaning and privacy
 
 Nicknames, cities and author ids were never exported. E-mails, phone numbers and CPF-like numbers inside the texts are masked. About 28% of the texts had lost every ã/õ in collection ("nao", "funçao"); those words were restored from intact texts and the original kept in `text_original`. Sentiment is per review, not per clause, so a cons list can contain a positive clause from a negative review: the data quality report explains this and the other limits.
