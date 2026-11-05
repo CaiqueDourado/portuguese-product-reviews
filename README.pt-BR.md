@@ -10,9 +10,9 @@
 
 ![Prós e contras a partir de reviews](docs/img/cover.pt-BR.png)
 
-São 2,87 milhões de reviews de produtos em português, de 9 lojas brasileiras. Cada um traz as estrelas do cliente, um rótulo de sentimento da AWS e notas por aspecto. Junto vai o pipeline de 2020 que transformou esses reviews em **prós e contras de 222.976 produtos**: 12,9 milhões de cláusulas com etiquetas gramaticais, chaves de casamento e forma canônica.
+2,87 milhões de avaliações de produto em português do Brasil, de 9 lojas. Com as estrelas do cliente, um rótulo de sentimento da AWS, notas por aspecto e o pipeline de 2020 que transformou tudo em **prós e contras de 222.976 produtos**: 12,9 milhões de pedaços de texto com classe gramatical, chaves de agrupamento e uma forma canônica.
 
-A base é cerca de 22 vezes maior que a B2W-Reviews01, a base de reviews em português mais conhecida. E traz os passos intermediários de um resumo de opiniões que rodou em produção.
+É umas 22 vezes o tamanho da B2W-Reviews01, a base de avaliações em português mais conhecida. E tem as etapas do meio de um pipeline de resumo de opiniões que rodou em produção.
 
 | Arquivo | Linhas | O que tem |
 |---|---:|---|
@@ -34,7 +34,7 @@ Um produto de `sample/` em JSON aninhado: o grupo 2679579, uma cafeteira elétri
 
 ![Os cinco passos](docs/img/flow.pt-BR.png)
 
-Os passos seguem a apresentação do autor, *"Divisão de Sentenças + Análise de sentimentos = Prós e Contras"*:
+Os passos seguem a minha apresentação, *"Divisão de Sentenças + Análise de sentimentos = Prós e Contras"*:
 
 1. **Sentimento de cada review.** O AWS Comprehend rotula o texto inteiro como POSITIVE, NEGATIVE, NEUTRAL ou MIXED. Reviews POSITIVE com 1 ou 2 estrelas viraram NEGATIVE.
 2. **Etiqueta de cada palavra.** É feita pelo Stanford POS Tagger, com um modelo em português: `não/ADV Recomendo/VERB …`. O Google Cloud Natural Language fazia isso antes e foi trocado em janeiro de 2020, por ser caro demais.
@@ -65,7 +65,7 @@ Dois produtos da amostra, com os prós e contras como foram calculados (`pros_co
 
 ![Sentimento por estrelas](docs/img/sentiment-by-rating.pt-BR.png)
 
-O AWS Comprehend concorda com as estrelas nas pontas e se divide no meio. Os reviews de 3 estrelas são 54% POSITIVE. Há 20.642 reviews de 5 estrelas rotulados NEGATIVE. Nas anotações de 2020, o autor explica: "clientes falam negativo, mas têm pena de dar nota ruim".
+O AWS Comprehend concorda com as estrelas nas pontas e se divide no meio. Os reviews de 3 estrelas são 54% POSITIVE. Há 20.642 reviews de 5 estrelas rotulados NEGATIVE. Nas anotações de 2020, eu explico: "clientes falam negativo, mas têm pena de dar nota ruim".
 
 ## Como usar
 
@@ -92,11 +92,11 @@ FROM 'aspect_ratings.parquet' GROUP BY aspect HAVING count(*) > 1000 ORDER BY me
 
 A coleta começou em 2017 para o **É bom? Vale a pena?** ([opiniaobomvaleapena.com.br, arquivado](https://web.archive.org/web/20230106180533/https://opiniaobomvaleapena.com.br/)). Era um site em WordPress com uma página por produto ("<produto> é bom? vale a pena?"), os reviews desse produto e links de afiliado para as lojas. A maioria das lojas entregava os reviews pela API em JSON da Bazaarvoice. Casas Bahia, Extra e Ponto Frio entregavam pela API própria da Via Varejo.
 
-Depois, a coleta passou para o crawler e o data lake do autor. Lá, cada review foi ligado à oferta da loja e ao grupo de produto, para que os reviews de um produto em todas as lojas fossem lidos juntos. Foi também no data lake que os prós e contras foram calculados, para as páginas de produto dos sites do autor. Detalhes na [metodologia](docs/methodology.md) (em inglês). A história do site está no [estudo de caso](docs/estudo-de-caso-e-bom-vale-a-pena.md).
+Depois, a coleta passou para o meu crawler e o meu data lake. Lá, cada review foi ligado à oferta da loja e ao grupo de produto, para que os reviews de um produto em todas as lojas fossem lidos juntos. Foi também no data lake que os prós e contras foram calculados, para as páginas de produto dos meus sites. Detalhes na [metodologia](docs/methodology.md) (em inglês). A história do site está no [estudo de caso](docs/estudo-de-caso-e-bom-vale-a-pena.md).
 
 [![Tudo Sobre Produtos](https://raw.githubusercontent.com/CaiqueDourado/CaiqueDourado/main/assets/tudosobreprodutos_primeira_versao.png)](https://web.archive.org/web/20251021032358/https://tudosobreprodutos.com.br/tudo-sobre-bebedouro-cadence-pure-vita-elegant-0v)
 
-*Tudo Sobre Produtos (2020), um dos sites do autor cujas páginas de produto mostravam estes reviews e seus prós e contras. [Arquivado no Wayback Machine](https://web.archive.org/web/20251021032358/https://tudosobreprodutos.com.br/tudo-sobre-bebedouro-cadence-pure-vita-elegant-0v).*
+*Tudo Sobre Produtos (2020), um dos meus sites cujas páginas de produto mostravam estes reviews e seus prós e contras. [Arquivado no Wayback Machine](https://web.archive.org/web/20251021032358/https://tudosobreprodutos.com.br/tudo-sobre-bebedouro-cadence-pure-vita-elegant-0v).*
 
 ## Privacidade e limpeza
 
@@ -122,7 +122,7 @@ stats.json     contagens de cada etapa do build
 
 ## Relacionados
 
-- Artigo: [Divisão de sentenças + análise de sentimentos = prós e contras](https://github.com/CaiqueDourado/articles/blob/main/pros-and-cons/README.pt-BR.md) ([em inglês no Medium](https://medium.com/@caiquedourado/sentence-splitting-sentiment-analysis-pros-and-cons-e3907d8d1d96)): como as cláusulas e os prós e contras destas avaliações foram feitos, e corrigidos.
+- Artigo: [Meus prós e contras diziam que "entrega rápida" era um contra](https://github.com/CaiqueDourado/articles/blob/main/pros-and-cons/README.pt-BR.md) ([em inglês no Medium](https://medium.com/@caiquedourado/sentence-splitting-sentiment-analysis-pros-and-cons-e3907d8d1d96)): como as cláusulas e os prós e contras destas avaliações foram feitos, e corrigidos.
 - [pros-e-contras-ptbr](https://github.com/CaiqueDourado/pros-e-contras-ptbr): o método de 2020 como biblioteca Python, com sentimento por cláusula. Artigos: [divisão em cláusulas](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/artigo-divisao-de-clausulas.md) (Google Cloud NL × Stanford × regras) e [prós e contras](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/artigo-pros-e-contras.md).
 - [Estudo de caso: É bom? Vale a pena?](docs/estudo-de-caso-e-bom-vale-a-pena.md): o site para o qual estes dados foram coletados.
 - [brazilian-ecommerce-products](https://github.com/CaiqueDourado/brazilian-ecommerce-products): os produtos a que estes reviews pertencem.

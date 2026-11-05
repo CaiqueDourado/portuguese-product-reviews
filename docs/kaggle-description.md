@@ -2,7 +2,7 @@
 
 ![Pros and cons from reviews](https://raw.githubusercontent.com/CaiqueDourado/portuguese-product-reviews/main/docs/img/cover.png?v=2)
 
-Reviews collected from 2017 to 2022 from the product pages of Americanas, Magazine Luiza, Submarino, Shoptime, Casas Bahia, Extra, Leroy Merlin, Ponto Frio and Fast Shop (written 2008–2019), for the author's review site *É bom? Vale a pena?* and data lake. About 22 times the size of B2W-Reviews01, the best-known Portuguese review dataset.
+Reviews collected from 2017 to 2022 from the product pages of Americanas, Magazine Luiza, Submarino, Shoptime, Casas Bahia, Extra, Leroy Merlin, Ponto Frio and Fast Shop (written 2008–2019), for my review site *É bom? Vale a pena?* and data lake. About 22 times the size of B2W-Reviews01, the best-known Portuguese review dataset.
 
 On top of the reviews, the 2020 pipeline that turned them into pros and cons:
 
@@ -16,7 +16,7 @@ On top of the reviews, the 2020 pipeline that turned them into pros and cons:
 
 ## Where the reviews were shown
 
-The collection started in 2017 for **É bom? Vale a pena?** ([archived](https://web.archive.org/web/20230106180533/https://opiniaobomvaleapena.com.br/)), one page per product with its reviews. Later the reviews and their pros and cons appeared on the product pages of the author's sites, such as [Tudo Sobre Produtos](https://web.archive.org/web/20251021032358/https://tudosobreprodutos.com.br/tudo-sobre-bebedouro-cadence-pure-vita-elegant-0v):
+The collection started in 2017 for **É bom? Vale a pena?** ([archived](https://web.archive.org/web/20230106180533/https://opiniaobomvaleapena.com.br/)), one page per product with its reviews. Later the reviews and their pros and cons appeared on the product pages of my sites, such as [Tudo Sobre Produtos](https://web.archive.org/web/20251021032358/https://tudosobreprodutos.com.br/tudo-sobre-bebedouro-cadence-pure-vita-elegant-0v):
 
 ![Tudo Sobre Produtos (2020)](https://raw.githubusercontent.com/CaiqueDourado/CaiqueDourado/main/assets/tudosobreprodutos_primeira_versao.png)
 

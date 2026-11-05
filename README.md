@@ -10,9 +10,9 @@
 
 ![Pros and cons from reviews](docs/img/cover.png)
 
-2.87 million product reviews in Brazilian Portuguese from 9 stores, with the customer's stars, an AWS sentiment label, scores per aspect, and the 2020 pipeline that turned them into **pros and cons for 222,976 products**: 12.9 million clauses with part-of-speech tags, matching keys and a canonical form.
+2.87 million product reviews in Brazilian Portuguese, from 9 stores. With the customer's stars, an AWS sentiment label, scores per aspect, and the 2020 pipeline that turned them into **pros and cons for 222,976 products**: 12.9 million pieces of text with part-of-speech tags, matching keys and a canonical form.
 
-It is about 22 times the size of B2W-Reviews01, the best-known Portuguese review dataset, and it includes the intermediate steps of an opinion-summary pipeline that ran in production.
+It's about 22 times the size of B2W-Reviews01, the best-known Portuguese review dataset. And it has the in-between steps of an opinion summary pipeline that ran in production.
 
 | File | Rows | What |
 |---|---:|---|
@@ -34,7 +34,7 @@ One product from `sample/` as nested JSON: group 2679579, an Arno electric coffe
 
 ![The five steps](docs/img/flow.png)
 
-From the author's 2020 presentation, *"Divisão de Sentenças + Análise de sentimentos = Prós e Contras"*:
+From my 2020 presentation, *"Divisão de Sentenças + Análise de sentimentos = Prós e Contras"*:
 
 1. **Sentiment of each review.** AWS Comprehend labels the whole text POSITIVE, NEGATIVE, NEUTRAL or MIXED. Reviews labelled POSITIVE with 1–2 stars were changed to NEGATIVE.
 2. **Tag every word.** The Stanford POS tagger (Portuguese model): `não/ADV Recomendo/VERB …`. Google Cloud Natural Language did this first and was dropped in January 2020 as too expensive.
@@ -65,7 +65,7 @@ Two products of the sample, with their pros and cons as computed (`pros_cons` jo
 
 ![Sentiment by stars](docs/img/sentiment-by-rating.png)
 
-AWS Comprehend agrees with the stars at the ends and splits in the middle: 3-star reviews are 54% POSITIVE, and 20,642 five-star reviews are NEGATIVE ("customers complain but don't want to give a bad grade", in the author's 2020 notes).
+AWS Comprehend agrees with the stars at the ends and splits in the middle: 3-star reviews are 54% POSITIVE, and 20,642 five-star reviews are NEGATIVE ("customers complain but don't want to give a bad grade", in my 2020 notes).
 
 ## Use it
 
@@ -90,11 +90,11 @@ FROM 'aspect_ratings.parquet' GROUP BY aspect HAVING count(*) > 1000 ORDER BY av
 
 ## Where the reviews came from
 
-The collection started in 2017 for **É bom? Vale a pena?** ([opiniaobomvaleapena.com.br, archived](https://web.archive.org/web/20230106180533/https://opiniaobomvaleapena.com.br/)), a WordPress site with one page per product ("<produto> é bom? vale a pena?"), its reviews, and affiliate links to the stores. Most stores served their reviews through Bazaarvoice's JSON API; Casas Bahia, Extra and Ponto Frio through Via Varejo's own. The collection then moved to the author's crawler and data lake, where each review was linked to the store offer and to the product group, so one product's reviews from all stores could be read together, and where the pros and cons were computed for the product pages of the author's sites. Details: [methodology](docs/methodology.md). The site's story: [case study](docs/case-study-e-bom-vale-a-pena.md).
+The collection started in 2017 for **É bom? Vale a pena?** ([opiniaobomvaleapena.com.br, archived](https://web.archive.org/web/20230106180533/https://opiniaobomvaleapena.com.br/)), a WordPress site with one page per product ("<produto> é bom? vale a pena?"), its reviews, and affiliate links to the stores. Most stores served their reviews through Bazaarvoice's JSON API; Casas Bahia, Extra and Ponto Frio through Via Varejo's own. The collection then moved to my crawler and data lake, where each review was linked to the store offer and to the product group, so one product's reviews from all stores could be read together, and where the pros and cons were computed for the product pages of my sites. Details: [methodology](docs/methodology.md). The site's story: [case study](docs/case-study-e-bom-vale-a-pena.md).
 
 [![Tudo Sobre Produtos](https://raw.githubusercontent.com/CaiqueDourado/CaiqueDourado/main/assets/tudosobreprodutos_primeira_versao.png)](https://web.archive.org/web/20251021032358/https://tudosobreprodutos.com.br/tudo-sobre-bebedouro-cadence-pure-vita-elegant-0v)
 
-*Tudo Sobre Produtos (2020), one of the author's sites whose product pages showed these reviews and their pros and cons. [Archived on the Wayback Machine](https://web.archive.org/web/20251021032358/https://tudosobreprodutos.com.br/tudo-sobre-bebedouro-cadence-pure-vita-elegant-0v).*
+*Tudo Sobre Produtos (2020), one of my sites whose product pages showed these reviews and their pros and cons. [Archived on the Wayback Machine](https://web.archive.org/web/20251021032358/https://tudosobreprodutos.com.br/tudo-sobre-bebedouro-cadence-pure-vita-elegant-0v).*
 
 ## Privacy and cleaning
 
@@ -120,7 +120,7 @@ stats.json     counts of every build step
 
 ## Related
 
-- Article: [Sentence splitting + sentiment analysis = pros and cons](https://medium.com/@caiquedourado/sentence-splitting-sentiment-analysis-pros-and-cons-e3907d8d1d96) (Medium): how the clauses and pros and cons from these reviews were made, and fixed.
+- Article: [My pros and cons said "fast delivery" was a con](https://medium.com/@caiquedourado/sentence-splitting-sentiment-analysis-pros-and-cons-e3907d8d1d96) (Medium): how the clauses and pros and cons from these reviews were made, and fixed.
 - [pros-e-contras-ptbr](https://github.com/CaiqueDourado/pros-e-contras-ptbr): the 2020 method as a Python library, plus clause-level sentiment. Articles: [clause splitting](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/article-clause-splitting.md) (Google Cloud NL × Stanford × rules) and [pros and cons](https://github.com/CaiqueDourado/pros-e-contras-ptbr/blob/main/docs/article-pros-and-cons.md).
 - [Case study: É bom? Vale a pena?](docs/case-study-e-bom-vale-a-pena.md): the review site this data was collected for.
 - [brazilian-ecommerce-products](https://github.com/CaiqueDourado/brazilian-ecommerce-products): the products these reviews belong to.
